@@ -1,51 +1,184 @@
 *, *:before, *:after {
-    box-sizing: border-box;
-    transition: background-color 1.5s ease;
-}
-/**--------- GRIDS ------------**/
+  box-sizing: border-box;
+  transition: background-color .25s ease; }
 
+/**--------- GRIDS ------------**/
 .grid {
-    font-size: 0px;
-    text-align: justify;
-}
-.grid:after {
-    content: '';
-    display: inline-block;
-    width: 100%;
-}
-.cell {
-    display: inline-block;
-    text-align: left;
-    vertical-align: top;
-    font-size: 16px;
-    font-size: 1rem;
-}
-/**--------- GRIDS ------------**/
+  font-size: 0px;
+  text-align: justify; }
 
-body {
-    background-color: darkgrey;
-    min-width: 400px;
-}
-.myPoints {
-/*	=container*/
-}
-.timeline:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 10px;
-    background: #afdcf8;
-    left: 20%;
-    margin-left: -10px;
-}
-/*.grid .sidebar {
-    width: 20%;
-    background-color: white;
-    color: black;
-    height: 100%;
-    position: fixed;
-}
-.grid .formContent {
-    width: 80%;
-}*/
+.grid:after {
+  content: '';
+  display: inline-block;
+  width: 100%; }
+
+.cell {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 16px;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0; }
+
+/**--------- GRIDS ------------**/
+body, html {
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  min-width: 300px; }
+
+li {
+  list-style: none;
+  text-decoration: none;
+  font-size: 1em;
+  color: white; }
+
+h1 {
+  font-size: 1.5em;
+  text-transform: uppercase; }
+
+h2 {
+  font-size: 1.3em;
+  text-transform: uppercase; }
+
+h3 {
+  font-size: 1.1em;
+  text-transform: uppercase; }
+
+p {
+  font-size: 1em; }
+
+a {
+  text-decoration: none;
+  display: inline-block; }
+
+input, textarea, select, a, button {
+  outline: none; }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  color: #B5B5B5;
+  text-align: center; }
+  header .logo {
+    width: 300px;
+    height: 100px;
+    background-image: url("../images/jhmomc_banner1.gif");
+    background-size: 100% auto;
+    background-repeat: no-repeat; }
+  header .buttons a:link, header .buttons a:visited {
+    font-size: 1em;
+    color: white;
+    padding: 1em 2em;
+    margin-left: 1em;
+    border-radius: 15px; }
+  header .buttons .signup a {
+    background-color: #0092D7; }
+    header .buttons .signup a:hover, header .buttons .signup a:active, header .buttons .signup a:focus {
+      background-color: #005e8b; }
+  header .buttons .login a {
+    background-color: #3EC303; }
+    header .buttons .login a:hover, header .buttons .login a:active, header .buttons .login a:focus {
+      background-color: #267802; }
+
+.sidebar {
+  overflow: auto;
+  background-color: #B5B5B5;
+  position: fixed;
+  top: 132px;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  margin: 2em;
+  padding: 2em;
+  border-radius: 15px; }
+  .sidebar nav {
+    width: 100%; }
+    .sidebar nav > ul {
+      padding: 0; }
+  .sidebar .active {
+    color: #EE8D09; }
+
+.main {
+  min-height: 100vh;
+  min-height: 100%;
+  background-color: #92DCE0;
+  color: white;
+  min-height: 100%;
+  padding-left: 360px;
+  padding-top: 150px;
+  font-size: 1em; }
+  .main h1.form-title {
+    width: 100%;
+    text-align: center;
+    color: #EE8D09; }
+  .main .form-main {
+    padding: 2em;
+    text-align: center; }
+  .main .form-heading {
+    text-align: center; }
+    .main .form-heading h1 {
+      color: #0092D7;
+      border-radius: 15px; }
+  .main .stage {
+    text-align: left;
+    padding: 0 2em;
+    margin-top: 1rem;
+    width: 100%; }
+    .main .stage .cell {
+      width: 30%; }
+    .main .stage form input, .main .stage form textarea, .main .stage form select {
+      border: 3px solid #fff;
+      line-height: 1.5;
+      font-size: 1.4em;
+      padding: 5px 10px;
+      color: black;
+      width: 100%;
+      background: #fff;
+      margin-bottom: 1em; }
+    .main .stage form ::-webkit-input-placeholder {
+      /* WebKit browsers */
+      color: #0092D7; }
+    .main .stage form :-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: #0092D7;
+      opacity: 1; }
+    .main .stage form ::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: #0092D7;
+      opacity: 1; }
+    .main .stage form :-ms-input-placeholder {
+      /* Internet Explorer 10+ */
+      color: #0092D7; }
+    .main .stage form .permission input, .main .stage form .permission label {
+      margin: 0.5em;
+      color: #0092D7;
+      width: 10%; }
+    .main .stage form .center {
+      margin: 0 auto;
+      text-align: center;
+      width: 100%; }
+    .main .stage form button {
+      font-size: 3em;
+      color: #3EC303;
+      background-color: transparent;
+      border: 0; }
+  .main .step2 .relatives {
+    margin: 1em 0em;
+    border: 3px solid #0092D7;
+    width: 100%; }
+    .main .step2 .relatives h3 {
+      background-color: #0092D7;
+      color: white;
+      margin: 0;
+      padding: 0.5em 1em;
+      font-weight: 700;
+      letter-spacing: 0.2em; }
+
+/*# sourceMappingURL=styles.css.map */
