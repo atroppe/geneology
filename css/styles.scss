@@ -117,6 +117,7 @@ header {
 //     width: 15%;
 // }
 .sidebar {
+    width: 350px;
     overflow: auto;
     background-color: $grey;
     position: fixed;
@@ -126,7 +127,7 @@ header {
     z-index: 2;
     margin: 2em;
     // margin-top: 155px;
-    padding: 2em;
+    padding: 1em;
     border-radius: 15px;
     nav {
         width: 100%;
@@ -139,6 +140,20 @@ header {
     }
     .active {
         color: $orange;
+    }
+    .federation {
+        margin-top: 2em;
+        p {
+            font-size: 0.8em;
+            font-style: italic;
+        }
+    }
+    .jf-logo {
+        width: 200px;
+        height: 57px;
+        background-image: url('../images/federation_logo.jpg');
+        background-size: 90% auto;
+        background-repeat: no-repeat;
     }
 }
 .main {

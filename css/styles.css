@@ -88,6 +88,7 @@ header {
       background-color: #267802; }
 
 .sidebar {
+  width: 350px;
   overflow: auto;
   background-color: #B5B5B5;
   position: fixed;
@@ -96,7 +97,7 @@ header {
   left: 0;
   z-index: 2;
   margin: 2em;
-  padding: 2em;
+  padding: 1em;
   border-radius: 15px; }
   .sidebar nav {
     width: 100%; }
@@ -104,6 +105,17 @@ header {
       padding: 0; }
   .sidebar .active {
     color: #EE8D09; }
+  .sidebar .federation {
+    margin-top: 2em; }
+    .sidebar .federation p {
+      font-size: 0.8em;
+      font-style: italic; }
+  .sidebar .jf-logo {
+    width: 200px;
+    height: 57px;
+    background-image: url("../images/federation_logo.jpg");
+    background-size: 90% auto;
+    background-repeat: no-repeat; }
 
 .main {
   min-height: 100vh;

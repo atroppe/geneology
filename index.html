@@ -54,13 +54,18 @@
                     </li>
                 </ul>
             </nav>
+            <div class="federation">
+
+                <div class="jf-logo"></div>
+                <p>This project Funded in part by a grant from the Jewish Federation of Monmouth County.</p>
+            </div>
         </div>
         <div class="form-main">
             <div class="stage step1">
                 <!--                 <div class="form-area"> -->
                 <form action="/submit.php" method="POST">
                     <div class="form-heading">
-                        <h1>You</h1>
+                        <h1>Sign Up</h1>
                     </div>
                     <div class="permission">
                         <p>By checking this box, you agree that the information you provide in this form may be used to create a publicly accessible Family Tree that will share this information with Members of and visitors to the Jewish Heritage Museum of Monmouth County. You further agree that this information may be used to display and share this information in digital formats. To request that your information be removed from JHMOMC exhibits, please contact us at info@jhmomc.org. </p>
@@ -76,7 +81,16 @@
                             <input type="text" id="last_name" name="last_name" placeholder="Last Name">
                         </div>
                         <div class="cell">
+                            <input type="text" id="home_phone" name="home_phone" placeholder="Home Phone">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="cell_phone" name="cell_phone" placeholder="Cell Phone">
+                        </div>
+                        <div class="cell">
                             <input type="text" id="email" name="email" placeholder="Email Address">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="password" name="password" placeholder="Password">
                         </div>
                     </div>
                     <div class="center">
@@ -103,10 +117,19 @@
                     </div>
                     <div class="grid">
                         <div class="cell">
+                            <input type="text" id="maiden_name" name="maiden_name" placeholder="Maiden Name">
+                        </div>
+                        <div class="cell">
                             <input type="text" id="spouse_name" name="spouse_name" placeholder="Spouse's Name">
                         </div>
                         <div class="cell">
                             <input type="text" id="spouse_maiden_name" name="spouse_maiden_name" placeholder="Spouse's Maiden Name">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="date_married" name="date_married" placeholder="Date of Marriage">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="place_married" name="place_married" placeholder="Place of Marriage">
                         </div>
                         <div class="cell">
                             <input type="text" id="siblings" name="siblings" placeholder="Siblings">
@@ -114,6 +137,114 @@
                         <div class="cell">
                             <input type="text" id="children" name="children" placeholder="Children">
                         </div>
+                    </div>
+                    <div class="center">
+                        <button type="submit" class="btn btn-success">
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="stage step3">
+                <form action="/submit.php" method="POST">
+                    <div class="form-heading">
+                        <h1>Your Background</h1>
+                    </div>
+                    <!--                     <div class="relatives">
+                        <h3>Are you related to...</h3>
+                        <div class="relative-list">
+                            <ul>
+                                <li>mama bear</li>
+                                <li>papa bear</li>
+                                <li>baby bear</li>
+                            </ul>
+                        </div>
+                    </div> -->
+                    <div class="grid">
+                        <div class="cell">
+                            <input type="text" id="D.O.B." name="D.O.B." placeholder="Date of Birth">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="place_born" name="place_born" placeholder="Place of Birth">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="mc_hometown" name="mc_hometown" placeholder="Home Town in Monmouth County Area">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="origin" name="origin" placeholder="Previous Home Town and Country of Origin">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="arrived_america" name="arrived_america" placeholder="Year Arrived in America">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="arrived_mc" name="arrived_mc" placeholder="Year Arrived in Monmouth County">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="b_mitzvah" name="b_mitzvah" placeholder="Bar/Bat Mitzvah?">
+                        </div>
+                        <div class="cell">
+                            <select>
+                                <option>Kosher Home?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select>
+                                <option>Kosher Out?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select>
+                                <option>Shomer Shabbat?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select>
+                                <option>Jewish Denomination?</option>
+                                <option>Orthodox</option>
+                                <option>Conservative</option>
+                                <option>Reform</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select>
+                                <option>Belong to a Temple?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                            <input type="text" id="temple" name="temple" placeholder="Which Temple?">
+                        </div>
+                        <div class="cell">
+                            <select>
+                                <option>Read Hebrew?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select>
+                                <option>Yiddish?</option>
+                                <option>Speak</option>
+                                <option>Understand</option>
+                                <option>Not at all</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select>
+                                <option>Attend Shabbat Services?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                            <input type="text" id="services_times_per_mo" name="services_times_per_mo" placeholder="Number of times per Month?">
+                            <input type="text" id="services_where" name="services_where" placeholder="Attend Services Where?">
+                        </div>
+                        
                     </div>
                     <div class="center">
                         <button type="submit" class="btn btn-success">
