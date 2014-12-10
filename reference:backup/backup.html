@@ -1,0 +1,79 @@
+<div class="container myPoints">
+        <header class="clearfix">
+            <span>Jewish History Museum of Monmouth County <span class="bp-icon bp-icon-about" data-content="This form will collect data to be used in our genealogy research project."></span></span>
+            <h1>Geneology Data Collection Form</h1>
+            <nav>
+                <a href="http://jhmomc.org/site/" class="bp-icon bp-icon-prev" data-info="previous page"><span>Previous page</span></a>
+                <a href="http://jhmomc.org/site/" class="bp-icon bp-icon-next" data-info="next page"><span>Next page</span></a>
+                <!-- 					<a href="http://jhmomc.org/site/" class="bp-icon bp-icon-drop" data-info="back to the Codrops article"><span>back to the Codrops article</span></a>
+					<a href="http://jhmomc.org/site/" class="bp-icon bp-icon-archive" data-info="Blueprints archive"><span>Go to the archive</span></a> -->
+            </nav>
+        </header>
+        <div class="grid">
+<!--             <div class="sidebar cell">
+                <p>hello</p>
+            </div> -->
+            <div class="main formContent cell">
+                <form class="cbp-mc-form" action="/submit.php" method="POST">
+                    <div class="cbp-mc-column">
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" name="first_name" placeholder=" ">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" name="last_name" placeholder=" ">
+                        <label for="email">Email Address</label>
+                        <input type="text" id="email" name="email" placeholder="">
+                        <!-- 	  					<label for="country">Siblings</label>
+	  					<select id="country" name="country">
+	  						<option>0</option>
+	  						<option>1</option>
+	  						<option>2</option>
+	  						<option>3+</option>
+	  					</select> -->
+                        <label for="sibs">Name(s) of Siblings</label>
+                        <textarea id="sibs" name="sibs"></textarea>
+                    </div>
+                    <div class="cbp-mc-column">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" name="phone" placeholder="home">
+
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" name="phone" placeholder="cell">
+
+                        <label for="affiliations">Temple Affiliations</label>
+                        <textarea id="affiliations" name="affiliations"></textarea>
+<!--                         <label>Occupation</label> -->
+<!--                         <select id="occupation" name="occupation">
+                            <option>Choose an occupation</option>
+                            <option>Web Designer</option>
+                            <option>Web Developer</option>
+                            <option>Hybrid</option>
+                        </select> -->
+                        <label for="spouse_name">Spouse's name</label>
+                        <input type="text" id="spouse_name" name="spouse_name" placeholder="">
+                        <label for="s_maiden_name">Spouse's Maiden Name</label>
+                        <input type="text" id="s_maiden_name" name="s_maiden_name" placeholder="">
+                    </div>
+                    <div class="cbp-mc-column">
+                        <label>Jewish Denomination</label>
+                        <select id="denomination" name="denomination">
+                            <option>Orthodox</option>
+                            <option>Conservative</option>
+                            <option>Reform</option>
+                            <option>Other</option>
+                        </select>
+                        <label for="dob">D.O.B.</label>
+                        <input type="text" id="dob" name="dob" placeholder="">
+                        <label for="date_married">Date Married</label>
+                        <input type="text" id="date_married" name="date_married" placeholder="">
+                        <label for="place_married">Place of Marriage</label>
+                        <input type="place_married" id="place_married" name="place_married" placeholder="">
+                        <label for="comments">Comments</label>
+                        <textarea id="comments" name="comments"></textarea>
+                    </div>
+                    <div class="cbp-mc-submit-wrap">
+                        <input class="cbp-mc-submit" type="submit" value="Send your data" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
