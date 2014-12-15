@@ -27,42 +27,39 @@
             </div>
         </div>
     </header>
-    <div class="main">
-        <!--         <div class="sidebar-placeholder cell"></div> -->
-        <!--         <h1 class="form-title">Data Collection Form</h1> -->
-        <div class="sidebar">
-            <nav>
-                <h2>Data Collection Form</h2>
-                <ul>
-                    <li class="active">You</li>
-                    <li>Relatives</li>
-                    <li>Your Background</li>
-                    <li>Your Father's Side
-                        <ul>
-                            <li>Father</li>
-                            <li>Grandfather (Father's Father)</li>
-                            <li>Grandmother (Father's Mother)</li>
-                        </ul>
-                    </li>
-                    <li>Your Mother's Side
-                        <ul>
-                            <li>Mother</li>
-                            <li>Grandfather (Mother's Mother)</li>
-                            <li>Grandmother (Mother's Mother)</li>
-                        </ul>
-                    </li>
-                    </li>
-                </ul>
-            </nav>
-            <div class="federation">
+    <div class="sidebar">
+        <nav>
+            <h2>Data Collection Form</h2>
+            <ul>
+                <li class="active">You</li>
+                <li>Relatives</li>
+                <li>Your Background</li>
+                <li>Your Father's Side
+                    <ul>
+                        <li>Father</li>
+                        <li>Grandfather (Father's Father)</li>
+                        <li>Grandmother (Father's Mother)</li>
+                    </ul>
+                </li>
+                <li>Your Mother's Side
+                    <ul>
+                        <li>Mother</li>
+                        <li>Grandfather (Mother's Mother)</li>
+                        <li>Grandmother (Mother's Mother)</li>
+                    </ul>
+                </li>
+                </li>
+            </ul>
+        </nav>
+        <div class="federation">
 
-                <div class="jf-logo"></div>
-                <p>This project Funded in part by a grant from the Jewish Federation of Monmouth County.</p>
-            </div>
+            <div class="jf-logo"></div>
+            <p>This project Funded in part by a grant from the Jewish Federation of Monmouth County.</p>
         </div>
+    </div>
+    <div class="main">
         <div class="form-main">
             <div class="stage step1">
-                <!--                 <div class="form-area"> -->
                 <form action="/submit.php" method="POST">
                     <div class="form-heading">
                         <h1>Sign Up</h1>
@@ -150,16 +147,6 @@
                     <div class="form-heading">
                         <h1>Your Background</h1>
                     </div>
-                    <!--                     <div class="relatives">
-                        <h3>Are you related to...</h3>
-                        <div class="relative-list">
-                            <ul>
-                                <li>mama bear</li>
-                                <li>papa bear</li>
-                                <li>baby bear</li>
-                            </ul>
-                        </div>
-                    </div> -->
                     <div class="grid">
                         <div class="cell">
                             <input type="text" id="D.O.B." name="D.O.B." placeholder="Date of Birth">
@@ -244,7 +231,129 @@
                             <input type="text" id="services_times_per_mo" name="services_times_per_mo" placeholder="Number of times per Month?">
                             <input type="text" id="services_where" name="services_where" placeholder="Attend Services Where?">
                         </div>
-                        
+                        <div class="cell">
+                            <input type="text" id="bakery" name="bakery" placeholder="Favorite Kosher/Jewish Bakery">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="bagel" name="bagel" placeholder="Best Bagel in Monmouth County">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="deli" name="deli" placeholder="Favorite Kosher/Jewish Deli">
+                            <select>
+                                <option>Favorite?</option>
+                                <option>Pastrami</option>
+                                <option>Corned Beef</option>
+                                <option>Brisket</option>
+                                <option>Veggie</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="center">
+                        <button type="submit" class="btn btn-success">
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="stage step4">
+                <div class="form-heading">
+                    <h1>Your Father's Side</h1>
+                </div>
+                <form action="/submit.php" method="POST">
+                <h2>Your Father</h2>
+                    <div class="grid">
+                        <div class="cell">
+                            <input type="text" id="father_first_name" name="father_first_name" placeholder="Father's First Name">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="father_last_name" name="father_last_name" placeholder="Father's Last Name">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="father_D.O.B." name="father_D.O.B." placeholder="Date of Birth">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="father_place_born" name="father_place_born" placeholder="Place of Birth">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="father_date_married" name="father_date_married" placeholder="Date of Marriage">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="father_place_married" name="father_place_married" placeholder="Place of Marriage">
+                        </div>
+                        <div class="cell">
+                            <select id="alive" name="alive">
+                                <option>Alive?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="death_date" name="death_date" placeholder="Date of Death">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="death_place" name="death_place" placeholder="Place of Death">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="death_cause" name="death_cause" placeholder="Cause of Death" >
+                        </div>
+                        <div class="cell">
+                            <label>Cemetary</label>
+                            <input type="text" id="cem_name" name="cem_name" placeholder="Name of Cemetary">
+                            <input type="text" id="cem_loc" name="cem_loc" placeholder="City, State">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="father_mc_hometown" name="father_mc_hometown" placeholder="Home Town here">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="father_origin" name="father_origin" placeholder="Previous Home Town and Country of Origin">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="father_arrived_america" name="father_arrived_america" placeholder="Year Arrived in America">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="father_arrived_mc" name="father_arrived_mc" placeholder="Year Arrived in Monmouth County">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="father_b_mitzvah" name="father_b_mitzvah" placeholder="Bar/Bat Mitzvah?">
+                        </div>
+                        <div class="cell">
+                            <select id="kosher_home" name="kosher_home">
+                                <option>Kosher Home?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="kosher_out" name="kosher_out">
+                                <option>Kosher Out?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="shomer_shabbat" name="shomer_shabbat">
+                                <option>Shomer Shabbat?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="denomination" name="denomination">
+                                <option>Jewish Denomination?</option>
+                                <option>Orthodox</option>
+                                <option>Conservative</option>
+                                <option>Reform</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="yiddish" name="denomination">
+                                <option>Yiddish?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="center">
                         <button type="submit" class="btn btn-success">

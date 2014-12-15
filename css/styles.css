@@ -37,18 +37,22 @@ li {
 
 h1 {
   font-size: 1.5em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: black; }
 
 h2 {
   font-size: 1.3em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: black; }
 
 h3 {
   font-size: 1.1em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: black; }
 
 p {
-  font-size: 1em; }
+  font-size: 1em;
+  color: black; }
 
 a {
   text-decoration: none;
@@ -132,7 +136,9 @@ header {
     color: #EE8D09; }
   .main .form-main {
     padding: 2em;
-    text-align: center; }
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto; }
   .main .form-heading {
     text-align: center; }
     .main .form-heading h1 {
