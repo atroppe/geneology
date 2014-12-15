@@ -261,8 +261,10 @@
                     <h1>Your Father's Side</h1>
                 </div>
                 <form action="/submit.php" method="POST">
-                <h2>Your Father</h2>
-                    <div class="grid">
+                    <div class="grid" id="father">
+                        <div class="cell">
+                            <h2>Your Father</h2>
+                        </div>
                         <div class="cell">
                             <input type="text" id="father_first_name" name="father_first_name" placeholder="Father's First Name">
                         </div>
@@ -282,25 +284,25 @@
                             <input type="text" id="father_place_married" name="father_place_married" placeholder="Place of Marriage">
                         </div>
                         <div class="cell">
-                            <select id="alive" name="alive">
+                            <select id="f_alive" name="f_alive">
                                 <option>Alive?</option>
                                 <option>Yes</option>
                                 <option>No</option>
                             </select>
                         </div>
                         <div class="cell">
-                            <input type="text" id="death_date" name="death_date" placeholder="Date of Death">
+                            <input type="text" id="f_death_date" name="f_death_date" placeholder="Date of Death">
                         </div>
                         <div class="cell">
-                            <input type="text" id="death_place" name="death_place" placeholder="Place of Death">
+                            <input type="text" id="f_death_place" name="f_death_place" placeholder="Place of Death">
                         </div>
                         <div class="cell">
-                            <input type="text" id="death_cause" name="death_cause" placeholder="Cause of Death" >
+                            <input type="text" id="f_death_cause" name="f_death_cause" placeholder="Cause of Death">
                         </div>
                         <div class="cell">
                             <label>Cemetary</label>
-                            <input type="text" id="cem_name" name="cem_name" placeholder="Name of Cemetary">
-                            <input type="text" id="cem_loc" name="cem_loc" placeholder="City, State">
+                            <input type="text" id="f_cem_name" name="f_cem_name" placeholder="Name of Cemetary">
+                            <input type="text" id="f_cem_loc" name="f_cem_loc" placeholder="City, State">
                         </div>
                         <div class="cell">
                             <input type="text" id="father_mc_hometown" name="father_mc_hometown" placeholder="Home Town here">
@@ -318,28 +320,28 @@
                             <input type="text" id="father_b_mitzvah" name="father_b_mitzvah" placeholder="Bar/Bat Mitzvah?">
                         </div>
                         <div class="cell">
-                            <select id="kosher_home" name="kosher_home">
+                            <select id="f_kosher_home" name="f_kosher_home">
                                 <option>Kosher Home?</option>
                                 <option>Yes</option>
                                 <option>No</option>
                             </select>
                         </div>
                         <div class="cell">
-                            <select id="kosher_out" name="kosher_out">
+                            <select id="f_kosher_out" name="f_kosher_out">
                                 <option>Kosher Out?</option>
                                 <option>Yes</option>
                                 <option>No</option>
                             </select>
                         </div>
                         <div class="cell">
-                            <select id="shomer_shabbat" name="shomer_shabbat">
+                            <select id="f_shomer_shabbat" name="f_shomer_shabbat">
                                 <option>Shomer Shabbat?</option>
                                 <option>Yes</option>
                                 <option>No</option>
                             </select>
                         </div>
                         <div class="cell">
-                            <select id="denomination" name="denomination">
+                            <select id="f_denomination" name="f_denomination">
                                 <option>Jewish Denomination?</option>
                                 <option>Orthodox</option>
                                 <option>Conservative</option>
@@ -348,7 +350,499 @@
                             </select>
                         </div>
                         <div class="cell">
-                            <select id="yiddish" name="denomination">
+                            <select id="f_yiddish" name="f_yiddish">
+                                <option>Yiddish?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid" id="father-grandfather">
+                        <div class="cell">
+                            <h2>Your Grandfather (Father's Father)</h2>
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gf_first_name" name="f_gf_first_name" placeholder="Father's First Name">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gf_last_name" name="f_gf_last_name" placeholder="Father's Last Name">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gf_D.O.B." name="f_gf_D.O.B." placeholder="Date of Birth">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gf_place_born" name="f_gf_place_born" placeholder="Place of Birth">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gf_date_married" name="f_gf_date_married" placeholder="Date of Marriage">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gf_place_married" name="f_gf_place_married" placeholder="Place of Marriage">
+                        </div>
+                        <div class="cell">
+                            <select id="f_gf_alive" name="f_gf_alive">
+                                <option>Alive?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gf_death_date" name="f_gf_death_date" placeholder="Date of Death">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gf_death_place" name="f_gf_death_place" placeholder="Place of Death">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gf_death_cause" name="f_gf_death_cause" placeholder="Cause of Death">
+                        </div>
+                        <div class="cell">
+                            <label>Cemetary</label>
+                            <input type="text" id="f_gf_cem_name" name="f_gf_cem_name" placeholder="Name of Cemetary">
+                            <input type="text" id="f_gf_cem_loc" name="f_gf_cem_loc" placeholder="City, State">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gf_mc_hometown" name="f_gf_mc_hometown" placeholder="Home Town here">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gf_origin" name="f_gf_origin" placeholder="Previous Home Town and Country of Origin">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gf_arrived_america" name="f_gf_arrived_america" placeholder="Year Arrived in America">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gf_arrived_mc" name="f_gf_arrived_mc" placeholder="Year Arrived in Monmouth County">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gf_b_mitzvah" name="f_gf_b_mitzvah" placeholder="Bar/Bat Mitzvah?">
+                        </div>
+                        <div class="cell">
+                            <select id="f_gf_kosher_home" name="f_gf_kosher_home">
+                                <option>Kosher Home?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="f_gf_kosher_out" name="f_gf_kosher_out">
+                                <option>Kosher Out?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="f_gf_shomer_shabbat" name="f_gf_shomer_shabbat">
+                                <option>Shomer Shabbat?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="f_gf_denomination" name="f_gf_denomination">
+                                <option>Jewish Denomination?</option>
+                                <option>Orthodox</option>
+                                <option>Conservative</option>
+                                <option>Reform</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="f_gf_yiddish" name="f_gf_yiddish">
+                                <option>Yiddish?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid" id="father-grandmother">
+                        <div class="cell">
+                            <h2>Your Grandmother (Father's Mother)</h2>
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gm_first_name" name="f_gm_first_name" placeholder="Father's First Name">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gm_last_name" name="f_gm_last_name" placeholder="Father's Last Name">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gm_D.O.B." name="f_gm_D.O.B." placeholder="Date of Birth">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gm_place_born" name="f_gm_place_born" placeholder="Place of Birth">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gm_date_married" name="f_gm_date_married" placeholder="Date of Marriage">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gm_place_married" name="f_gm_place_married" placeholder="Place of Marriage">
+                        </div>
+                        <div class="cell">
+                            <select id="f_gm_alive" name="f_gm_alive">
+                                <option>Alive?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gm_death_date" name="f_gm_death_date" placeholder="Date of Death">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gm_death_place" name="f_gm_death_place" placeholder="Place of Death">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gm_death_cause" name="f_gm_death_cause" placeholder="Cause of Death">
+                        </div>
+                        <div class="cell">
+                            <label>Cemetary</label>
+                            <input type="text" id="f_gm_cem_name" name="f_gm_cem_name" placeholder="Name of Cemetary">
+                            <input type="text" id="f_gm_cem_loc" name="f_gm_cem_loc" placeholder="City, State">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gm_mc_hometown" name="f_gm_mc_hometown" placeholder="Home Town here">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gm_origin" name="f_gm_origin" placeholder="Previous Home Town and Country of Origin">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gm_arrived_america" name="f_gm_arrived_america" placeholder="Year Arrived in America">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gm_arrived_mc" name="f_gm_arrived_mc" placeholder="Year Arrived in Monmouth County">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="f_gm_b_mitzvah" name="f_gm_b_mitzvah" placeholder="Bar/Bat Mitzvah?">
+                        </div>
+                        <div class="cell">
+                            <select id="f_gm_kosher_home" name="f_gm_kosher_home">
+                                <option>Kosher Home?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="f_gm_kosher_out" name="f_gm_kosher_out">
+                                <option>Kosher Out?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="f_gm_shomer_shabbat" name="f_gm_shomer_shabbat">
+                                <option>Shomer Shabbat?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="f_gm_denomination" name="f_gm_denomination">
+                                <option>Jewish Denomination?</option>
+                                <option>Orthodox</option>
+                                <option>Conservative</option>
+                                <option>Reform</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="f_gm_yiddish" name="f_gm_yiddish">
+                                <option>Yiddish?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <button type="submit" class="btn btn-success">
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="stage step5">
+                <div class="form-heading">
+                    <h1>Your Mother's Side</h1>
+                </div>
+                <form action="/submit.php" method="POST">
+                    <div class="grid" id="mother">
+                        <div class="cell">
+                            <h2>Your Mother</h2>
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_first_name" name="m_first_name" placeholder="Mother's First Name">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_last_name" name="m_last_name" placeholder="Mother's Last Name">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_D.O.B." name="m_D.O.B." placeholder="Date of Birth">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_place_born" name="m_place_born" placeholder="Place of Birth">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_date_married" name="m_date_married" placeholder="Date of Marriage">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_place_married" name="m_place_married" placeholder="Place of Marriage">
+                        </div>
+                        <div class="cell">
+                            <select id="m_alive" name="m_alive">
+                                <option>Alive?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_death_date" name="m_death_date" placeholder="Date of Death">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_death_place" name="m_death_place" placeholder="Place of Death">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_death_cause" name="m_death_cause" placeholder="Cause of Death">
+                        </div>
+                        <div class="cell">
+                            <label>Cemetary</label>
+                            <input type="text" id="m_cem_name" name="m_cem_name" placeholder="Name of Cemetary">
+                            <input type="text" id="m_cem_loc" name="m_cem_loc" placeholder="City, State">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_mc_hometown" name="m_mc_hometown" placeholder="Home Town here">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_origin" name="m_origin" placeholder="Previous Home Town and Country of Origin">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_arrived_america" name="m_arrived_america" placeholder="Year Arrived in America">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_arrived_mc" name="m_arrived_mc" placeholder="Year Arrived in Monmouth County">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_b_mitzvah" name="m_b_mitzvah" placeholder="Bat Mitzvah?">
+                        </div>
+                        <div class="cell">
+                            <select id="m_kosher_home" name="m_kosher_home">
+                                <option>Kosher Home?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="m_kosher_out" name="m_kosher_out">
+                                <option>Kosher Out?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="m_shomer_shabbat" name="m_shomer_shabbat">
+                                <option>Shomer Shabbat?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="m_denomination" name="m_denomination">
+                                <option>Jewish Denomination?</option>
+                                <option>Orthodox</option>
+                                <option>Conservative</option>
+                                <option>Reform</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="m_yiddish" name="m_yiddish">
+                                <option>Yiddish?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid" id="mother-grandfather">
+                        <div class="cell">
+                            <h2>Your Grandfather (Mother's Father)</h2>
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gf_first_name" name="m_gf_first_name" placeholder="Father's First Name">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gf_last_name" name="m_gf_last_name" placeholder="Father's Last Name">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gf_D.O.B." name="m_gf_D.O.B." placeholder="Date of Birth">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gf_place_born" name="m_gf_place_born" placeholder="Place of Birth">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gf_date_married" name="m_gf_date_married" placeholder="Date of Marriage">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gf_place_married" name="m_gf_place_married" placeholder="Place of Marriage">
+                        </div>
+                        <div class="cell">
+                            <select id="m_gf_alive" name="m_gf_alive">
+                                <option>Alive?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gf_death_date" name="m_gf_death_date" placeholder="Date of Death">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gf_death_place" name="m_gf_death_place" placeholder="Place of Death">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gf_death_cause" name="m_gf_death_cause" placeholder="Cause of Death">
+                        </div>
+                        <div class="cell">
+                            <label>Cemetary</label>
+                            <input type="text" id="m_gf_cem_name" name="m_gf_cem_name" placeholder="Name of Cemetary">
+                            <input type="text" id="m_gf_cem_loc" name="m_gf_cem_loc" placeholder="City, State">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gf_mc_hometown" name="m_gf_mc_hometown" placeholder="Home Town here">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gf_origin" name="m_gf_origin" placeholder="Previous Home Town and Country of Origin">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gf_arrived_america" name="m_gf_arrived_america" placeholder="Year Arrived in America">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gf_arrived_mc" name="m_gf_arrived_mc" placeholder="Year Arrived in Monmouth County">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gf_b_mitzvah" name="m_gf_b_mitzvah" placeholder="Bar/Bat Mitzvah?">
+                        </div>
+                        <div class="cell">
+                            <select id="m_gf_kosher_home" name="m_gf_kosher_home">
+                                <option>Kosher Home?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="m_gf_kosher_out" name="m_gf_kosher_out">
+                                <option>Kosher Out?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="m_gf_shomer_shabbat" name="m_gf_shomer_shabbat">
+                                <option>Shomer Shabbat?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="m_gf_denomination" name="m_gf_denomination">
+                                <option>Jewish Denomination?</option>
+                                <option>Orthodox</option>
+                                <option>Conservative</option>
+                                <option>Reform</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="m_gf_yiddish" name="m_gf_yiddish">
+                                <option>Yiddish?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid" id="mother-grandmother">
+                        <div class="cell">
+                            <h2>Your Grandmother (Mother's Mother)</h2>
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gm_first_name" name="m_gm_first_name" placeholder="Father's First Name">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gm_last_name" name="m_gm_last_name" placeholder="Father's Last Name">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gm_D.O.B." name="m_gm_D.O.B." placeholder="Date of Birth">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gm_place_born" name="m_gm_place_born" placeholder="Place of Birth">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gm_date_married" name="m_gm_date_married" placeholder="Date of Marriage">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gm_place_married" name="m_gm_place_married" placeholder="Place of Marriage">
+                        </div>
+                        <div class="cell">
+                            <select id="m_gm_alive" name="m_gm_alive">
+                                <option>Alive?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gm_death_date" name="m_gm_death_date" placeholder="Date of Death">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gm_death_place" name="m_gm_death_place" placeholder="Place of Death">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gm_death_cause" name="m_gm_death_cause" placeholder="Cause of Death">
+                        </div>
+                        <div class="cell">
+                            <label>Cemetary</label>
+                            <input type="text" id="m_gm_cem_name" name="m_gm_cem_name" placeholder="Name of Cemetary">
+                            <input type="text" id="m_gm_cem_loc" name="m_gm_cem_loc" placeholder="City, State">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gm_mc_hometown" name="m_gm_mc_hometown" placeholder="Home Town here">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gm_origin" name="m_gm_origin" placeholder="Previous Home Town and Country of Origin">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gm_arrived_america" name="m_gm_arrived_america" placeholder="Year Arrived in America">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gm_arrived_mc" name="m_gm_arrived_mc" placeholder="Year Arrived in Monmouth County">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="m_gm_b_mitzvah" name="m_gm_b_mitzvah" placeholder="Bar/Bat Mitzvah?">
+                        </div>
+                        <div class="cell">
+                            <select id="m_gm_kosher_home" name="m_gm_kosher_home">
+                                <option>Kosher Home?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="m_gm_kosher_out" name="m_gm_kosher_out">
+                                <option>Kosher Out?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="m_gm_shomer_shabbat" name="m_gm_shomer_shabbat">
+                                <option>Shomer Shabbat?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="m_gm_denomination" name="m_gm_denomination">
+                                <option>Jewish Denomination?</option>
+                                <option>Orthodox</option>
+                                <option>Conservative</option>
+                                <option>Reform</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <select id="m_gm_yiddish" name="m_gm_yiddish">
                                 <option>Yiddish?</option>
                                 <option>Yes</option>
                                 <option>No</option>
