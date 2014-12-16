@@ -88,25 +88,56 @@ header {
       background-color: #267802; }
 
 .sidebar {
-  width: 350px;
+  width: 315px;
   overflow: auto;
   background-color: #B5B5B5;
   position: fixed;
-  top: 132px;
-  bottom: 0;
   left: 0;
+  bottom: 0;
+  top: 7.25em;
   z-index: 2;
-  margin: 2em;
-  padding: 1em;
-  border-radius: 15px; }
+  padding: 1em; }
+  .sidebar h3 {
+    text-align: center;
+    color: white; }
   .sidebar nav {
-    width: 100%; }
+    width: 100%;
+    padding: 1em 0em 1em 4em; }
     .sidebar nav > ul {
-      padding: 0; }
-  .sidebar .active {
-    color: #EE8D09; }
+      padding: 0;
+      margin: 0; }
+    .sidebar nav a, .sidebar nav li {
+      text-transform: uppercase;
+      line-height: 2;
+      position: relative; }
+    .sidebar nav a:link, .sidebar nav a:visited {
+      color: white; }
+    .sidebar nav a:hover, .sidebar nav a:focus, .sidebar nav a:active {
+      color: #3EC303; }
+  .sidebar .active:before {
+    content: '';
+    width: 1em;
+    height: 1.2em;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-250%, -50%);
+    background-color: #3EC303; }
+  .sidebar .active:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-150%, -50%);
+    width: 0;
+    height: 0;
+    border-top: 0.6em solid transparent;
+    border-left: 1em solid #3EC303;
+    border-bottom: 0.6em solid transparent; }
   .sidebar .federation {
-    margin-top: 2em; }
+    position: absolute;
+    bottom: 1em;
+    left: 1em; }
     .sidebar .federation p {
       font-size: 0.8em;
       font-style: italic; }
@@ -126,73 +157,87 @@ header {
   padding-left: 360px;
   padding-top: 150px;
   font-size: 1em; }
-  .main h1.form-title {
+
+h1.form-title {
+  width: 100%;
+  text-align: center;
+  color: #EE8D09; }
+
+.form-main {
+  padding: 2em;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto; }
+
+.form-heading {
+  text-align: center; }
+  .form-heading h1 {
+    color: #0092D7; }
+
+.stage {
+  text-align: left;
+  padding: 0 2em;
+  margin-top: 1em;
+  width: 100%; }
+  .stage .cell {
+    width: 30%; }
+  .stage form input, .stage form textarea, .stage form select {
+    border: 3px solid #fff;
+    font-size: 1em;
+    padding: 5px 10px;
+    color: black;
     width: 100%;
+    background: #fff;
+    margin-bottom: 1em; }
+  .stage form ::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #0092D7; }
+  .stage form :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #0092D7;
+    opacity: 1; }
+  .stage form ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #0092D7;
+    opacity: 1; }
+  .stage form :-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #0092D7; }
+  .stage form .permission input, .stage form .permission label {
+    margin: 0.5em;
+    color: #0092D7;
+    width: 10%; }
+  .stage form .permission p {
+    color: #0092D7;
+    line-height: 1.5; }
+  .stage form .center {
+    margin: 0 auto;
     text-align: center;
-    color: #EE8D09; }
-  .main .form-main {
-    padding: 2em;
-    text-align: center;
-    max-width: 1000px;
-    margin: 0 auto; }
-  .main .form-heading {
-    text-align: center; }
-    .main .form-heading h1 {
-      color: #0092D7;
-      border-radius: 15px; }
-  .main .stage {
-    text-align: left;
-    padding: 0 2em;
-    margin-top: 1rem;
-    width: 100%; }
-    .main .stage .cell {
-      width: 30%; }
-    .main .stage form input, .main .stage form textarea, .main .stage form select {
-      border: 3px solid #fff;
-      line-height: 1.5;
-      font-size: 1.4em;
-      padding: 5px 10px;
-      color: black;
-      width: 100%;
-      background: #fff;
-      margin-bottom: 1em; }
-    .main .stage form ::-webkit-input-placeholder {
-      /* WebKit browsers */
-      color: #0092D7; }
-    .main .stage form :-moz-placeholder {
-      /* Mozilla Firefox 4 to 18 */
-      color: #0092D7;
-      opacity: 1; }
-    .main .stage form ::-moz-placeholder {
-      /* Mozilla Firefox 19+ */
-      color: #0092D7;
-      opacity: 1; }
-    .main .stage form :-ms-input-placeholder {
-      /* Internet Explorer 10+ */
-      color: #0092D7; }
-    .main .stage form .permission input, .main .stage form .permission label {
-      margin: 0.5em;
-      color: #0092D7;
-      width: 10%; }
-    .main .stage form .center {
-      margin: 0 auto;
-      text-align: center;
-      width: 100%; }
-    .main .stage form button {
-      font-size: 3em;
-      color: #3EC303;
-      background-color: transparent;
-      border: 0; }
-  .main .step2 .relatives {
-    margin: 1em 0em;
-    border: 3px solid #0092D7;
-    width: 100%; }
-    .main .step2 .relatives h3 {
-      background-color: #0092D7;
-      color: white;
-      margin: 0;
-      padding: 0.5em 1em;
-      font-weight: 700;
-      letter-spacing: 0.2em; }
+    width: 100%;
+    padding: 1em; }
+  .stage form button {
+    font-size: 4em;
+    color: #3EC303;
+    background-color: transparent;
+    border: 0; }
+    .stage form button:hover {
+      color: #267802; }
+
+.step2 .relatives {
+  border: 3px solid #0092D7;
+  width: 100%;
+  background-color: #FFF; }
+  .step2 .relatives h3 {
+    background-color: #0092D7;
+    color: white;
+    margin: 0;
+    padding: 0.5em 1em;
+    font-weight: 700;
+    letter-spacing: 0.2em; }
+.step2 .relative-list li {
+  color: #0092D7; }
+
+.relatives, .form-heading {
+  margin-bottom: 2em; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -28,6 +28,7 @@ $grey: #B5B5B5;
 $turquoise: #92DCE0;
 $blue: #0092D7;
 $green: #3EC303;
+$green-hover: darken($green, 15%);
 $orange: #EE8D09;
 $header-height: 132px;
 // @mixin darkenHover($baseColor) {
@@ -103,7 +104,7 @@ header {
             a {
                 background-color: $blue;
                 &:hover, &:active, &:focus {
-                    background-color: darken($blue, 15%)
+                    background-color: darken($blue, 15%);
                 }
             }
         }
@@ -111,7 +112,7 @@ header {
             a {
                 background-color: $green;
                 &:hover, &:active, &:focus {
-                    background-color: darken($green, 15%)
+                    background-color: $green-hover;
                 }
             }
         }
@@ -121,32 +122,73 @@ header {
 //     width: 15%;
 // }
 .sidebar {
-    width: 350px;
+    width: 315px;
     overflow: auto;
     background-color: $grey;
     position: fixed;
-    top: 132px;
-    bottom: 0;
+    // top: 50%;
     left: 0;
+    bottom: 0;
+    top: 7.25em;
+    // transform: translateY(-50%);
     z-index: 2;
-    margin: 2em;
+    // margin: 2em;
     // margin-top: 155px;
     padding: 1em;
-    border-radius: 15px;
+    // border-radius: 15px;
+    h3 {
+        text-align: center;
+        color: white;
+    }
     nav {
         width: 100%;
+        padding: 1em 0em 1em 4em;
         &>ul {
             padding: 0;
+            margin: 0;
         }
-        // .cell.father, .cell.mother {
-        //     width: 100%;
-        // }
+        a, li {
+            text-transform: uppercase;
+            line-height: 2;
+            position: relative;
+        }
+        a:link, a:visited {
+            color: white;
+        }
+        a:hover, a:focus, a:active {
+            color: $green;
+        }
     }
     .active {
-        color: $orange;
+        // color: $orange;
+        &:before {
+            content: '';
+            width: 1em;
+            height: 1.2em;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(-250%, -50%);
+            background-color: $green;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(-150%, -50%);
+            width: 0;
+            height: 0;
+            border-top: 0.6em solid transparent;
+            border-left: 1em solid $green;
+            border-bottom: 0.6em solid transparent;
+        }
     }
     .federation {
-        margin-top: 2em;
+        // margin-top: 2em;
+        position: absolute;
+        bottom: 1em;
+        left: 1em;
         p {
             font-size: 0.8em;
             font-style: italic;
@@ -169,114 +211,127 @@ header {
     padding-left: 360px;
     padding-top: 150px;
     font-size: 1em;
-    h1.form-title {
-        width: 100%;
-        text-align: center;
-        color: $orange;
+}
+h1.form-title {
+    width: 100%;
+    text-align: center;
+    color: $orange;
+}
+.form-main {
+    padding: 2em;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.form-section {
+    // a {
+    //     font-size: 3em;
+    //     color: $blue;
+    //     margin-top: 1rem;
+    // }
+}
+.form-heading {
+    text-align: center;
+    h1 {
+        color: $blue;
     }
-    .form-main {
-        padding: 2em;
-        text-align: center;
-        max-width: 1000px;
-        margin: 0 auto;
+}
+.stage {
+    text-align: left;
+    padding: 0 2em;
+    margin-top: 1em;
+    width: 100%;
+    .cell {
+        width: 30%;
     }
-    .form-section {
-        // a {
-        //     font-size: 3em;
-        //     color: $blue;
-        //     margin-top: 1rem;
-        // }
-    }
-    .form-heading {
-        text-align: center;
-        h1 {
-            color: $blue;
-            // background-color: $blue;
-            // padding: 1em;
-            border-radius: 15px;
-        }
-    }
-    .stage {
-        text-align: left;
-        padding: 0 2em;
-        margin-top: 1rem;
-        width: 100%;
-        .cell {
-            width: 30%;
-        }
-        form {
-            input, textarea, select {
-                border: 3px solid #fff;
-                line-height: 1.5;
-                font-size: 1.4em;
-                padding: 5px 10px;
-                color: black;
-                // display: block;
-                width: 100%;
-                background: #fff;
-                margin-bottom: 1em;
-            }
-            // input.placeholder {
-            //     color: black;
-            // }
-            ::-webkit-input-placeholder {
-                /* WebKit browsers */
-                
-                color: $blue;
-            }
-            :-moz-placeholder {
-                /* Mozilla Firefox 4 to 18 */
-                
-                color: $blue;
-                opacity: 1;
-            }
-            ::-moz-placeholder {
-                /* Mozilla Firefox 19+ */
-                
-                color: $blue;
-                opacity: 1;
-            }
-            :-ms-input-placeholder {
-                /* Internet Explorer 10+ */
-                
-                color: $blue;
-            }
-            .permission {
-                input, label {
-                    margin: 0.5em;
-                    color: $blue;
-                    width: 10%;
-                }
-            }
-            .center {
-                margin: 0 auto;
-                text-align: center;
-                width: 100%;
-            }
-            button {
-                font-size: 3em;
-                color: $green;
-                // margin-top: 1rem;
-                background-color: transparent;
-                border: 0;
-            }
-        }
-    }
-    .step2 {
-        .relatives {
-            margin: 1em 0em;
-            border: 3px solid $blue;
+    form {
+        input, textarea, select {
+            border: 3px solid #fff;
+            // line-height: 1.5;
+            font-size: 1em;
+            padding: 5px 10px;
+            color: black;
+            // display: block;
             width: 100%;
-            h3 {
-                background-color: $blue;
-                color: white;
-                margin: 0;
-                padding: 0.5em 1em;
-                font-weight: 700;
-                letter-spacing: 0.2em;
+            background: #fff;
+            margin-bottom: 1em;
+        }
+        // input.placeholder {
+        //     color: black;
+        // }
+        ::-webkit-input-placeholder {
+            /* WebKit browsers */
+            
+            color: $blue;
+        }
+        :-moz-placeholder {
+            /* Mozilla Firefox 4 to 18 */
+            
+            color: $blue;
+            opacity: 1;
+        }
+        ::-moz-placeholder {
+            /* Mozilla Firefox 19+ */
+            
+            color: $blue;
+            opacity: 1;
+        }
+        :-ms-input-placeholder {
+            /* Internet Explorer 10+ */
+            
+            color: $blue;
+        }
+        .permission {
+            input, label {
+                margin: 0.5em;
+                color: $blue;
+                width: 10%;
+            }
+            p {
+                color: $blue;
+                line-height: 1.5;
+            }
+        }
+        .center {
+            margin: 0 auto;
+            text-align: center;
+            width: 100%;
+            padding: 1em;
+        }
+        button {
+            font-size: 4em;
+            color: $green;
+            // margin-top: 1rem;
+            background-color: transparent;
+            border: 0;
+            &:hover {
+                color: $green-hover;
             }
         }
     }
+}
+.step2 {
+    .relatives {
+        border: 3px solid $blue;
+        width: 100%;
+        background-color: #FFF;
+        h3 {
+            background-color: $blue;
+            color: white;
+            margin: 0;
+            padding: 0.5em 1em;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+        }
+    }
+    .relative-list {
+        li {
+            color: $blue;
+        }
+    }
+}
+.relatives, .form-heading {
+    margin-bottom: 2em;
 }
 //
 //
