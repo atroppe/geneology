@@ -26,7 +26,7 @@ body, html {
   font-family: 'Lato', Calibri, Arial, sans-serif;
   font-size: 16px;
   width: 100%;
-  height: 100%;
+  height: auto;
   min-width: 300px; }
 
 li {
@@ -48,11 +48,18 @@ h3 {
   text-transform: uppercase; }
 
 p {
-  font-size: 1em; }
+  font-size: 1em;
+  color: #0092D7;
+  line-height: 1.5; }
 
 a {
   text-decoration: none;
   display: inline-block; }
+
+label {
+  color: #0092D7;
+  line-height: 2;
+  text-transform: uppercase; }
 
 input, textarea, select, a, button {
   outline: none; }
@@ -137,7 +144,8 @@ header {
   .sidebar .federation {
     position: absolute;
     bottom: 1em;
-    left: 1em; }
+    left: 50%;
+    transform: translateX(-50%); }
     .sidebar .federation p {
       font-size: 0.8em;
       font-style: italic; }
@@ -172,15 +180,29 @@ h1.form-title {
 .form-heading {
   text-align: center; }
   .form-heading h1 {
-    color: #0092D7; }
+    color: #0092D7;
+    letter-spacing: 0.2em; }
 
 .stage {
   text-align: left;
   padding: 0 2em;
   margin-top: 1em;
   width: 100%; }
-  .stage .cell {
-    width: 30%; }
+  .stage form .cell {
+    width: 30%;
+    vertical-align: top; }
+  .stage form .wide {
+    width: 48%; }
+  .stage form .subHeading {
+    width: 100%; }
+    .stage form .subHeading h2 {
+      background-color: #0092D7;
+      border-radius: 15px;
+      color: white;
+      margin: 0;
+      padding: 0.5em 1em;
+      font-weight: 700;
+      letter-spacing: 0.2em; }
   .stage form input, .stage form textarea, .stage form select {
     border: 3px solid #fff;
     font-size: 1em;
@@ -189,6 +211,8 @@ h1.form-title {
     width: 100%;
     background: #fff;
     margin-bottom: 1em; }
+  .stage form select {
+    color: #0092D7; }
   .stage form ::-webkit-input-placeholder {
     /* WebKit browsers */
     color: #0092D7; }
@@ -203,13 +227,16 @@ h1.form-title {
   .stage form :-ms-input-placeholder {
     /* Internet Explorer 10+ */
     color: #0092D7; }
-  .stage form .permission input, .stage form .permission label {
-    margin: 0.5em;
-    color: #0092D7;
-    width: 10%; }
-  .stage form .permission p {
-    color: #0092D7;
-    line-height: 1.5; }
+  .stage form .permission {
+    width: 100%;
+    vertical-align: top; }
+    .stage form .permission .check {
+      width: 5%; }
+    .stage form .permission .checkText {
+      width: 95%; }
+      .stage form .permission .checkText p {
+        padding: 0;
+        margin: 0; }
   .stage form .center {
     margin: 0 auto;
     text-align: center;
@@ -237,7 +264,7 @@ h1.form-title {
 .step2 .relative-list li {
   color: #0092D7; }
 
-.relatives, .form-heading {
-  margin-bottom: 2em; }
+.relatives, .form-heading, .subHeading, .permission {
+  margin-bottom: 2rem; }
 
 /*# sourceMappingURL=styles.css.map */

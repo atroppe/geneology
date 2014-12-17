@@ -22,6 +22,9 @@
     margin: 0;
     padding: 0;
 }
+// .alignTop {
+//     vertical-align: top;
+// }
 /**--------- GRIDS ------------**/
 
 $grey: #B5B5B5;
@@ -41,7 +44,7 @@ body, html {
     font-family: 'Lato', Calibri, Arial, sans-serif;
     font-size: 16px;
     width: 100%;
-    height: 100%;
+    height: auto;
     min-width: 300px;
 }
 li {
@@ -67,11 +70,18 @@ h3 {
 }
 p {
     font-size: 1em;
-    // color: black;
+    color: $blue;
+    line-height: 1.5;
 }
 a {
     text-decoration: none;
     display: inline-block;
+}
+label {
+    // margin: 0.5em;
+    color: $blue;
+    line-height: 2;
+    text-transform: uppercase;
 }
 input, textarea, select, a, button {
     outline: none;
@@ -188,13 +198,18 @@ header {
         // margin-top: 2em;
         position: absolute;
         bottom: 1em;
-        left: 1em;
+        left: 50%;
+        transform: translateX(-50%);
+        // margin: 0 auto;
+        // text-align: center;
         p {
             font-size: 0.8em;
             font-style: italic;
         }
     }
     .jf-logo {
+        // margin: 0 auto;
+        // text-align: center;
         width: 200px;
         height: 57px;
         background-image: url('../images/federation_logo.jpg');
@@ -234,6 +249,7 @@ h1.form-title {
     text-align: center;
     h1 {
         color: $blue;
+        letter-spacing: 0.2em;
     }
 }
 .stage {
@@ -241,10 +257,27 @@ h1.form-title {
     padding: 0 2em;
     margin-top: 1em;
     width: 100%;
-    .cell {
-        width: 30%;
-    }
     form {
+        .cell {
+            width: 30%;
+            vertical-align: top;
+        }
+        .wide {
+            width: 48%;
+        }
+        .subHeading {
+            width: 100%;
+            h2 {
+                // text-align: center;
+                background-color: $blue;
+                border-radius: 15px;
+                color: white;
+                margin: 0;
+                padding: 0.5em 1em;
+                font-weight: 700;
+                letter-spacing: 0.2em;
+            }
+        }
         input, textarea, select {
             border: 3px solid #fff;
             // line-height: 1.5;
@@ -256,9 +289,9 @@ h1.form-title {
             background: #fff;
             margin-bottom: 1em;
         }
-        // input.placeholder {
-        //     color: black;
-        // }
+        select {
+            color: $blue;
+        }
         ::-webkit-input-placeholder {
             /* WebKit browsers */
             
@@ -282,14 +315,17 @@ h1.form-title {
             color: $blue;
         }
         .permission {
-            input, label {
-                margin: 0.5em;
-                color: $blue;
-                width: 10%;
+            width: 100%;
+            vertical-align: top;
+            .check {
+                width: 5%;
             }
-            p {
-                color: $blue;
-                line-height: 1.5;
+            .checkText {
+                width: 95%;
+                p {
+                    padding: 0;
+                    margin: 0;
+                }
             }
         }
         .center {
@@ -330,8 +366,15 @@ h1.form-title {
         }
     }
 }
-.relatives, .form-heading {
-    margin-bottom: 2em;
+.step3 {
+    // form {
+    //     .cell {
+    //         width: 45%;
+    //     }
+    // }
+}
+.relatives, .form-heading, .subHeading, .permission {
+    margin-bottom: 2rem;
 }
 //
 //

@@ -63,7 +63,7 @@
         <div class="federation">
 
             <div class="jf-logo"></div>
-            <p>This project Funded in part by a grant from the Jewish Federation of Monmouth County.</p>
+            <!--            <p>This project Funded in part by a grant from the Jewish Federation of Monmouth County.</p> -->
         </div>
     </div>
     <div class="main">
@@ -74,12 +74,14 @@
                     <h1>Sign Up</h1>
                 </div>
                 <form action="/submit.php" method="POST">
-                    <div class="permission">
-                        <p>By checking this box, you agree that the information you provide in this form may be used to create a publicly accessible Family Tree that will share this information with Members of and visitors to the Jewish Heritage Museum of Monmouth County. You further agree that this information may be used to display and share this information in digital formats. To request that your information be removed from JHMOMC exhibits, please contact us at info@jhmomc.org. </p>
-                        <label class="cell">I agree</label>
-                        <input class="cell" id="permission" name="permission" type="checkbox">
+                    <div class="permission grid">
+                        <div class="cell check">
+                            <input id="permission" name="permission" type="checkbox">
+                        </div>
+                        <div class="cell checkText">
+                            <p>By checking this box, you agree that the information you provide in this form may be used to create a publicly accessible Family Tree that will share this information with Members of and visitors to the Jewish Heritage Museum of Monmouth County. You further agree that this information may be used to display and share this information in digital formats. To request that your information be removed from JHMOMC exhibits, please contact us at <a href="mailto:info@jhmomc.org?Subject=Information%20Removal">info@jhmomc.org</a>. </p>
+                        </div>
                     </div>
-
                     <div class="grid">
                         <div class="cell">
                             <input type="text" id="first_name" name="first_name" placeholder="First Name">
@@ -158,23 +160,11 @@
                 </div>
                 <form action="/submit.php" method="POST">
                     <div class="grid">
-                        <div class="cell">
+                        <div class="cell narrow">
                             <input type="text" id="D.O.B." name="D.O.B." placeholder="Date of Birth">
                         </div>
-                        <div class="cell">
+                        <div class="cell narrow">
                             <input type="text" id="place_born" name="place_born" placeholder="Place of Birth">
-                        </div>
-                        <div class="cell">
-                            <input type="text" id="mc_hometown" name="mc_hometown" placeholder="Home Town in Monmouth County Area">
-                        </div>
-                        <div class="cell">
-                            <input type="text" id="origin" name="origin" placeholder="Previous Home Town and Country of Origin">
-                        </div>
-                        <div class="cell">
-                            <input type="text" id="arrived_america" name="arrived_america" placeholder="Year Arrived in America">
-                        </div>
-                        <div class="cell">
-                            <input type="text" id="arrived_mc" name="arrived_mc" placeholder="Year Arrived in Monmouth County">
                         </div>
                         <div class="cell">
                             <input type="text" id="b_mitzvah" name="b_mitzvah" placeholder="Bar/Bat Mitzvah?">
@@ -211,14 +201,6 @@
                         </div>
                         <div class="cell">
                             <select>
-                                <option>Belong to a Temple?</option>
-                                <option>Yes</option>
-                                <option>No</option>
-                            </select>
-                            <input type="text" id="temple" name="temple" placeholder="Which Temple?">
-                        </div>
-                        <div class="cell">
-                            <select>
                                 <option>Read Hebrew?</option>
                                 <option>Yes</option>
                                 <option>No</option>
@@ -234,20 +216,46 @@
                         </div>
                         <div class="cell">
                             <select>
+                                <option>Belong to a Temple?</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="temple" name="temple" placeholder="Which Temple?">
+                        </div>
+                        <div class="cell">
+                            <select>
                                 <option>Attend Shabbat Services?</option>
                                 <option>Yes</option>
                                 <option>No</option>
                             </select>
+                        </div>
+                        <div class="cell">
                             <input type="text" id="services_times_per_mo" name="services_times_per_mo" placeholder="Number of times per Month?">
+                        </div>
+                        <div class="cell">
                             <input type="text" id="services_where" name="services_where" placeholder="Attend Services Where?">
                         </div>
                         <div class="cell">
+                            <input type="text" id="arrived_america" name="arrived_america" placeholder="Year Arrived in America">
+                        </div>
+                        <div class="cell wide">
+                            <input type="text" id="arrived_mc" name="arrived_mc" placeholder="Year Arrived in Monmouth County">
+                        </div>
+                        <div class="cell wide">
+                            <input type="text" id="mc_hometown" name="mc_hometown" placeholder="Home Town in Monmouth County Area">
+                        </div>
+                        <div class="cell wide">
+                            <input type="text" id="origin" name="origin" placeholder="Previous Home Town and Country of Origin">
+                        </div>
+                        <div class="cell alignTop wide">
                             <input type="text" id="bakery" name="bakery" placeholder="Favorite Kosher/Jewish Bakery">
                         </div>
-                        <div class="cell">
+                        <div class="cell alignTop wide">
                             <input type="text" id="bagel" name="bagel" placeholder="Best Bagel in Monmouth County">
                         </div>
-                        <div class="cell">
+                        <div class="cell alignTop wide">
                             <input type="text" id="deli" name="deli" placeholder="Favorite Kosher/Jewish Deli">
                             <select>
                                 <option>Favorite?</option>
@@ -257,7 +265,6 @@
                                 <option>Veggie</option>
                             </select>
                         </div>
-
                     </div>
                     <div class="center">
                         <button type="submit" class="btn btn-success">
@@ -271,8 +278,9 @@
                     <h1>Your Father's Side</h1>
                 </div>
                 <form action="/submit.php" method="POST">
+                    <a name="father"></a>
                     <div class="grid" id="father">
-                        <div class="cell">
+                        <div class="cell subHeading">
                             <h2>Your Father</h2>
                         </div>
                         <div class="cell">
@@ -310,24 +318,14 @@
                             <input type="text" id="f_death_cause" name="f_death_cause" placeholder="Cause of Death">
                         </div>
                         <div class="cell">
-                            <label>Cemetary</label>
+                            <!--                             <label>Cemetary</label> -->
                             <input type="text" id="f_cem_name" name="f_cem_name" placeholder="Name of Cemetary">
-                            <input type="text" id="f_cem_loc" name="f_cem_loc" placeholder="City, State">
                         </div>
                         <div class="cell">
-                            <input type="text" id="father_mc_hometown" name="father_mc_hometown" placeholder="Home Town here">
+                            <input type="text" id="f_cem_loc" name="f_cem_loc" placeholder="City &amp; State of Cemetary">
                         </div>
                         <div class="cell">
-                            <input type="text" id="father_origin" name="father_origin" placeholder="Previous Home Town and Country of Origin">
-                        </div>
-                        <div class="cell">
-                            <input type="text" id="father_arrived_america" name="father_arrived_america" placeholder="Year Arrived in America">
-                        </div>
-                        <div class="cell">
-                            <input type="text" id="father_arrived_mc" name="father_arrived_mc" placeholder="Year Arrived in Monmouth County">
-                        </div>
-                        <div class="cell">
-                            <input type="text" id="father_b_mitzvah" name="father_b_mitzvah" placeholder="Bar/Bat Mitzvah?">
+                            <input type="text" id="father_b_mitzvah" name="father_b_mitzvah" placeholder="Bar Mitzvah?">
                         </div>
                         <div class="cell">
                             <select id="f_kosher_home" name="f_kosher_home">
@@ -366,9 +364,22 @@
                                 <option>No</option>
                             </select>
                         </div>
+                        <div class="cell wide">
+                            <input type="text" id="father_mc_hometown" name="father_mc_hometown" placeholder="Home Town here">
+                        </div>
+                        <div class="cell wide">
+                            <input type="text" id="father_origin" name="father_origin" placeholder="Previous Home Town and Country of Origin">
+                        </div>
+                        <div class="cell wide">
+                            <input type="text" id="father_arrived_america" name="father_arrived_america" placeholder="Year Arrived in America">
+                        </div>
+                        <div class="cell wide">
+                            <input type="text" id="father_arrived_mc" name="father_arrived_mc" placeholder="Year Arrived in Monmouth County">
+                        </div>
                     </div>
+                    <a name="f-gf"></a>
                     <div class="grid" id="father-grandfather">
-                        <div class="cell">
+                        <div class="cell subHeading">
                             <h2>Your Grandfather (Father's Father)</h2>
                         </div>
                         <div class="cell">
@@ -406,24 +417,13 @@
                             <input type="text" id="f_gf_death_cause" name="f_gf_death_cause" placeholder="Cause of Death">
                         </div>
                         <div class="cell">
-                            <label>Cemetary</label>
                             <input type="text" id="f_gf_cem_name" name="f_gf_cem_name" placeholder="Name of Cemetary">
-                            <input type="text" id="f_gf_cem_loc" name="f_gf_cem_loc" placeholder="City, State">
                         </div>
                         <div class="cell">
-                            <input type="text" id="f_gf_mc_hometown" name="f_gf_mc_hometown" placeholder="Home Town here">
+                            <input type="text" id="f_gf_cem_loc" name="f_gf_cem_loc" placeholder="City &amp; State of Cemetary">
                         </div>
                         <div class="cell">
-                            <input type="text" id="f_gf_origin" name="f_gf_origin" placeholder="Previous Home Town and Country of Origin">
-                        </div>
-                        <div class="cell">
-                            <input type="text" id="f_gf_arrived_america" name="f_gf_arrived_america" placeholder="Year Arrived in America">
-                        </div>
-                        <div class="cell">
-                            <input type="text" id="f_gf_arrived_mc" name="f_gf_arrived_mc" placeholder="Year Arrived in Monmouth County">
-                        </div>
-                        <div class="cell">
-                            <input type="text" id="f_gf_b_mitzvah" name="f_gf_b_mitzvah" placeholder="Bar/Bat Mitzvah?">
+                            <input type="text" id="f_gf_b_mitzvah" name="f_gf_b_mitzvah" placeholder="Bar Mitzvah?">
                         </div>
                         <div class="cell">
                             <select id="f_gf_kosher_home" name="f_gf_kosher_home">
@@ -462,9 +462,22 @@
                                 <option>No</option>
                             </select>
                         </div>
+                        <div class="cell wide">
+                            <input type="text" id="f_gf_mc_hometown" name="f_gf_mc_hometown" placeholder="Home Town here">
+                        </div>
+                        <div class="cell wide">
+                            <input type="text" id="f_gf_origin" name="f_gf_origin" placeholder="Previous Home Town and Country of Origin">
+                        </div>
+                        <div class="cell wide">
+                            <input type="text" id="f_gf_arrived_america" name="f_gf_arrived_america" placeholder="Year Arrived in America">
+                        </div>
+                        <div class="cell wide">
+                            <input type="text" id="f_gf_arrived_mc" name="f_gf_arrived_mc" placeholder="Year Arrived in Monmouth County">
+                        </div>
                     </div>
+                    <a name="f-gm"></a>
                     <div class="grid" id="father-grandmother">
-                        <div class="cell">
+                        <div class="cell subHeading">
                             <h2>Your Grandmother (Father's Mother)</h2>
                         </div>
                         <div class="cell">
@@ -502,24 +515,13 @@
                             <input type="text" id="f_gm_death_cause" name="f_gm_death_cause" placeholder="Cause of Death">
                         </div>
                         <div class="cell">
-                            <label>Cemetary</label>
                             <input type="text" id="f_gm_cem_name" name="f_gm_cem_name" placeholder="Name of Cemetary">
-                            <input type="text" id="f_gm_cem_loc" name="f_gm_cem_loc" placeholder="City, State">
                         </div>
                         <div class="cell">
-                            <input type="text" id="f_gm_mc_hometown" name="f_gm_mc_hometown" placeholder="Home Town here">
+                            <input type="text" id="f_gm_cem_loc" name="f_gm_cem_loc" placeholder="City &amp; State of Cemetary">
                         </div>
                         <div class="cell">
-                            <input type="text" id="f_gm_origin" name="f_gm_origin" placeholder="Previous Home Town and Country of Origin">
-                        </div>
-                        <div class="cell">
-                            <input type="text" id="f_gm_arrived_america" name="f_gm_arrived_america" placeholder="Year Arrived in America">
-                        </div>
-                        <div class="cell">
-                            <input type="text" id="f_gm_arrived_mc" name="f_gm_arrived_mc" placeholder="Year Arrived in Monmouth County">
-                        </div>
-                        <div class="cell">
-                            <input type="text" id="f_gm_b_mitzvah" name="f_gm_b_mitzvah" placeholder="Bar/Bat Mitzvah?">
+                            <input type="text" id="f_gm_b_mitzvah" name="f_gm_b_mitzvah" placeholder="Bat Mitzvah?">
                         </div>
                         <div class="cell">
                             <select id="f_gm_kosher_home" name="f_gm_kosher_home">
@@ -558,6 +560,18 @@
                                 <option>No</option>
                             </select>
                         </div>
+                        <div class="cell wide">
+                            <input type="text" id="f_gm_mc_hometown" name="f_gm_mc_hometown" placeholder="Home Town here">
+                        </div>
+                        <div class="cell wide">
+                            <input type="text" id="f_gm_origin" name="f_gm_origin" placeholder="Previous Home Town and Country of Origin">
+                        </div>
+                        <div class="cell wide">
+                            <input type="text" id="f_gm_arrived_america" name="f_gm_arrived_america" placeholder="Year Arrived in America">
+                        </div>
+                        <div class="cell wide">
+                            <input type="text" id="f_gm_arrived_mc" name="f_gm_arrived_mc" placeholder="Year Arrived in Monmouth County">
+                        </div>
                     </div>
                     <div class="center">
                         <button type="submit" class="btn btn-success">
@@ -571,8 +585,9 @@
                     <h1>Your Mother's Side</h1>
                 </div>
                 <form action="/submit.php" method="POST">
+                    <a name="mother"></a>
                     <div class="grid" id="mother">
-                        <div class="cell">
+                        <div class="cell subHeading">
                             <h2>Your Mother</h2>
                         </div>
                         <div class="cell">
@@ -610,21 +625,10 @@
                             <input type="text" id="m_death_cause" name="m_death_cause" placeholder="Cause of Death">
                         </div>
                         <div class="cell">
-                            <label>Cemetary</label>
                             <input type="text" id="m_cem_name" name="m_cem_name" placeholder="Name of Cemetary">
-                            <input type="text" id="m_cem_loc" name="m_cem_loc" placeholder="City, State">
                         </div>
                         <div class="cell">
-                            <input type="text" id="m_mc_hometown" name="m_mc_hometown" placeholder="Home Town here">
-                        </div>
-                        <div class="cell">
-                            <input type="text" id="m_origin" name="m_origin" placeholder="Previous Home Town and Country of Origin">
-                        </div>
-                        <div class="cell">
-                            <input type="text" id="m_arrived_america" name="m_arrived_america" placeholder="Year Arrived in America">
-                        </div>
-                        <div class="cell">
-                            <input type="text" id="m_arrived_mc" name="m_arrived_mc" placeholder="Year Arrived in Monmouth County">
+                            <input type="text" id="m_cem_loc" name="m_cem_loc" placeholder="City &amp; State">
                         </div>
                         <div class="cell">
                             <input type="text" id="m_b_mitzvah" name="m_b_mitzvah" placeholder="Bat Mitzvah?">
@@ -666,9 +670,22 @@
                                 <option>No</option>
                             </select>
                         </div>
+                        <div class="cell wide">
+                            <input type="text" id="m_mc_hometown" name="m_mc_hometown" placeholder="Home Town here">
+                        </div>
+                        <div class="cell wide">
+                            <input type="text" id="m_origin" name="m_origin" placeholder="Previous Home Town and Country of Origin">
+                        </div>
+                        <div class="cell wide">
+                            <input type="text" id="m_arrived_america" name="m_arrived_america" placeholder="Year Arrived in America">
+                        </div>
+                        <div class="cell wide">
+                            <input type="text" id="m_arrived_mc" name="m_arrived_mc" placeholder="Year Arrived in Monmouth County">
+                        </div>
                     </div>
+                    <a name="m-gf"></a>
                     <div class="grid" id="mother-grandfather">
-                        <div class="cell">
+                        <div class="cell subHeading">
                             <h2>Your Grandfather (Mother's Father)</h2>
                         </div>
                         <div class="cell">
@@ -706,24 +723,13 @@
                             <input type="text" id="m_gf_death_cause" name="m_gf_death_cause" placeholder="Cause of Death">
                         </div>
                         <div class="cell">
-                            <label>Cemetary</label>
                             <input type="text" id="m_gf_cem_name" name="m_gf_cem_name" placeholder="Name of Cemetary">
-                            <input type="text" id="m_gf_cem_loc" name="m_gf_cem_loc" placeholder="City, State">
                         </div>
                         <div class="cell">
-                            <input type="text" id="m_gf_mc_hometown" name="m_gf_mc_hometown" placeholder="Home Town here">
+                            <input type="text" id="m_gf_cem_loc" name="m_gf_cem_loc" placeholder="City &amp; State of Cemetary">
                         </div>
                         <div class="cell">
-                            <input type="text" id="m_gf_origin" name="m_gf_origin" placeholder="Previous Home Town and Country of Origin">
-                        </div>
-                        <div class="cell">
-                            <input type="text" id="m_gf_arrived_america" name="m_gf_arrived_america" placeholder="Year Arrived in America">
-                        </div>
-                        <div class="cell">
-                            <input type="text" id="m_gf_arrived_mc" name="m_gf_arrived_mc" placeholder="Year Arrived in Monmouth County">
-                        </div>
-                        <div class="cell">
-                            <input type="text" id="m_gf_b_mitzvah" name="m_gf_b_mitzvah" placeholder="Bar/Bat Mitzvah?">
+                            <input type="text" id="m_gf_b_mitzvah" name="m_gf_b_mitzvah" placeholder="Bar Mitzvah?">
                         </div>
                         <div class="cell">
                             <select id="m_gf_kosher_home" name="m_gf_kosher_home">
@@ -762,9 +768,23 @@
                                 <option>No</option>
                             </select>
                         </div>
+                        <div class="cell wide">
+                            <input type="text" id="m_gf_mc_hometown" name="m_gf_mc_hometown" placeholder="Home Town here">
+                        </div>
+                        <div class="cell wide">
+                            <input type="text" id="m_gf_origin" name="m_gf_origin" placeholder="Previous Home Town and Country of Origin">
+                        </div>
+                        <div class="cell wide">
+                            <input type="text" id="m_gf_arrived_america" name="m_gf_arrived_america" placeholder="Year Arrived in America">
+                        </div>
+                        <div class="cell wide">
+                            <input type="text" id="m_gf_arrived_mc" name="m_gf_arrived_mc" placeholder="Year Arrived in Monmouth County">
+                        </div>
+
                     </div>
+                    <a name="m-gm"></a>
                     <div class="grid" id="mother-grandmother">
-                        <div class="cell">
+                        <div class="cell subHeading">
                             <h2>Your Grandmother (Mother's Mother)</h2>
                         </div>
                         <div class="cell">
@@ -802,24 +822,13 @@
                             <input type="text" id="m_gm_death_cause" name="m_gm_death_cause" placeholder="Cause of Death">
                         </div>
                         <div class="cell">
-                            <label>Cemetary</label>
                             <input type="text" id="m_gm_cem_name" name="m_gm_cem_name" placeholder="Name of Cemetary">
-                            <input type="text" id="m_gm_cem_loc" name="m_gm_cem_loc" placeholder="City, State">
                         </div>
                         <div class="cell">
-                            <input type="text" id="m_gm_mc_hometown" name="m_gm_mc_hometown" placeholder="Home Town here">
+                            <input type="text" id="m_gm_cem_loc" name="m_gm_cem_loc" placeholder="City &amp; State">
                         </div>
                         <div class="cell">
-                            <input type="text" id="m_gm_origin" name="m_gm_origin" placeholder="Previous Home Town and Country of Origin">
-                        </div>
-                        <div class="cell">
-                            <input type="text" id="m_gm_arrived_america" name="m_gm_arrived_america" placeholder="Year Arrived in America">
-                        </div>
-                        <div class="cell">
-                            <input type="text" id="m_gm_arrived_mc" name="m_gm_arrived_mc" placeholder="Year Arrived in Monmouth County">
-                        </div>
-                        <div class="cell">
-                            <input type="text" id="m_gm_b_mitzvah" name="m_gm_b_mitzvah" placeholder="Bar/Bat Mitzvah?">
+                            <input type="text" id="m_gm_b_mitzvah" name="m_gm_b_mitzvah" placeholder="Bat Mitzvah?">
                         </div>
                         <div class="cell">
                             <select id="m_gm_kosher_home" name="m_gm_kosher_home">
@@ -858,6 +867,18 @@
                                 <option>No</option>
                             </select>
                         </div>
+                        <div class="cell wide">
+                            <input type="text" id="m_gm_mc_hometown" name="m_gm_mc_hometown" placeholder="Home Town here">
+                        </div>
+                        <div class="cell wide">
+                            <input type="text" id="m_gm_origin" name="m_gm_origin" placeholder="Previous Home Town and Country of Origin">
+                        </div>
+                        <div class="cell wide">
+                            <input type="text" id="m_gm_arrived_america" name="m_gm_arrived_america" placeholder="Year Arrived in America">
+                        </div>
+                        <div class="cell wide">
+                            <input type="text" id="m_gm_arrived_mc" name="m_gm_arrived_mc" placeholder="Year Arrived in Monmouth County">
+                        </div>
                     </div>
                     <div class="center">
                         <button type="submit" class="btn btn-success">
@@ -870,8 +891,9 @@
     </div>
     <script src="js/modernizr.custom.js"></script>
     <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
-    <!--   <script type="text/javascript" src="./bower_components/parse-sdk/lib/parse.min.js"></script>  -->
-    <script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
+    <script type="text/javascript" src="./bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="./bower_components/parse-sdk/lib/parse.min.js"></script>
+    <!--     // <script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script> -->
     <script type="text/javascript" src="./js/app.js"></script>
 </body>
 

@@ -38,4 +38,8 @@ function app(){
 
 	var myFormView = new GeneologyFormView();
 	// console.log(myFormView)
+
+
+
+	
 }
