@@ -252,99 +252,99 @@ h1.form-title {
         letter-spacing: 0.2em;
     }
 }
+form {
+    .cell {
+        width: 30%;
+        vertical-align: top;
+    }
+    .wide {
+        width: 48%;
+    }
+    .subHeading {
+        width: 100%;
+        h2 {
+            // text-align: center;
+            background-color: $blue;
+            border-radius: 15px;
+            color: white;
+            margin: 0;
+            padding: 0.5em 1em;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+        }
+    }
+    input, textarea, select {
+        border: 3px solid #fff;
+        // line-height: 1.5;
+        font-size: 1em;
+        padding: 5px 10px;
+        color: black;
+        // display: block;
+        width: 100%;
+        background: #fff;
+        margin-bottom: 1em;
+    }
+    select {
+        color: $blue;
+    }
+    ::-webkit-input-placeholder {
+        /* WebKit browsers */
+        
+        color: $blue;
+    }
+    :-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        
+        color: $blue;
+        opacity: 1;
+    }
+    ::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        
+        color: $blue;
+        opacity: 1;
+    }
+    :-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+        
+        color: $blue;
+    }
+    .permission {
+        width: 100%;
+        vertical-align: top;
+        .check {
+            width: 5%;
+        }
+        .checkText {
+            width: 95%;
+            p {
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+    .center {
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+        padding: 1em;
+    }
+    button {
+        font-size: 4em;
+        color: $green;
+        // margin-top: 1rem;
+        background-color: transparent;
+        border: 0;
+        &:hover {
+            color: $green-hover;
+        }
+    }
+}
 .stage {
     text-align: left;
     padding: 0 2em;
     margin-top: 1em;
     width: 100%;
-    form {
-        .cell {
-            width: 30%;
-            vertical-align: top;
-        }
-        .wide {
-            width: 48%;
-        }
-        .subHeading {
-            width: 100%;
-            h2 {
-                // text-align: center;
-                background-color: $blue;
-                border-radius: 15px;
-                color: white;
-                margin: 0;
-                padding: 0.5em 1em;
-                font-weight: 700;
-                letter-spacing: 0.2em;
-            }
-        }
-        input, textarea, select {
-            border: 3px solid #fff;
-            // line-height: 1.5;
-            font-size: 1em;
-            padding: 5px 10px;
-            color: black;
-            // display: block;
-            width: 100%;
-            background: #fff;
-            margin-bottom: 1em;
-        }
-        select {
-            color: $blue;
-        }
-        ::-webkit-input-placeholder {
-            /* WebKit browsers */
-            
-            color: $blue;
-        }
-        :-moz-placeholder {
-            /* Mozilla Firefox 4 to 18 */
-            
-            color: $blue;
-            opacity: 1;
-        }
-        ::-moz-placeholder {
-            /* Mozilla Firefox 19+ */
-            
-            color: $blue;
-            opacity: 1;
-        }
-        :-ms-input-placeholder {
-            /* Internet Explorer 10+ */
-            
-            color: $blue;
-        }
-        .permission {
-            width: 100%;
-            vertical-align: top;
-            .check {
-                width: 5%;
-            }
-            .checkText {
-                width: 95%;
-                p {
-                    padding: 0;
-                    margin: 0;
-                }
-            }
-        }
-        .center {
-            margin: 0 auto;
-            text-align: center;
-            width: 100%;
-            padding: 1em;
-        }
-        button {
-            font-size: 4em;
-            color: $green;
-            // margin-top: 1rem;
-            background-color: transparent;
-            border: 0;
-            &:hover {
-                color: $green-hover;
-            }
-        }
-    }
 }
 .step2 {
     .relatives {

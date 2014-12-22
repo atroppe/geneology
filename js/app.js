@@ -31,9 +31,9 @@ function app(){
 	});
 
 	window.GeneologyFormModel = Parse.Object.extend('FormSubmission', {
-		defaults: {
-			// first_name: "matt"
-		}
+		// defaults: {
+		// 	first_name: "NA"
+		// }
 	});
 
 	var myFormView = new GeneologyFormView();
