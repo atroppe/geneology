@@ -26,11 +26,12 @@
 //     vertical-align: top;
 // }
 /**--------- GRIDS ------------**/
-
+$navy: #023F75;
 $grey: #B5B5B5;
 $turquoise: #92DCE0;
 $blue: #0092D7;
-$green: #3EC303;
+// $green: #3EC303;
+$green: #7d00d6;
 $green-hover: darken($green, 15%);
 $orange: #EE8D09;
 $header-height: 132px;
@@ -46,6 +47,7 @@ body, html {
     width: 100%;
     height: auto;
     min-width: 300px;
+    background-color: $turquoise;
 }
 li {
     list-style: none;
@@ -222,10 +224,13 @@ header {
     min-height: 100%;
     background-color: $turquoise;
     color: white;
-    min-height: 100%;
     padding-left: 360px;
     padding-top: 150px;
     font-size: 1em;
+}
+.success-msg {
+    font-size: 1em;
+    color: $navy;
 }
 h1.form-title {
     width: 100%;
@@ -248,7 +253,7 @@ h1.form-title {
 .form-heading {
     text-align: center;
     h1 {
-        color: $blue;
+        color: $navy;
         letter-spacing: 0.2em;
     }
 }
@@ -320,6 +325,7 @@ form {
             p {
                 padding: 0;
                 margin: 0;
+                color: $navy;
             }
         }
     }
@@ -330,13 +336,15 @@ form {
         padding: 1em;
     }
     button {
-        font-size: 4em;
-        color: $green;
+        font-size: 1em;
+        padding: 1em 2em;
+        color: white;
         // margin-top: 1rem;
-        background-color: transparent;
+        background-color: $green;
         border: 0;
+        border-radius: 15px;
         &:hover {
-            color: $green-hover;
+            background-color: $green-hover;
         }
     }
 }

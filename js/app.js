@@ -35,20 +35,37 @@ function app() {
                 console.log("request succeeded");
             });
 
+            model.fetch().then(function(mod){
+            	console.log(mod.toJSON()); 
+            });
+
             this.remove();
+            $('.success-msg').html("Your data has been submitted.  Thank you for participating!");
         }
     });
 
     window.GeneologyFormModel = Parse.Object.extend('FormSubmission', {
         defaults: {
-            first_name: "JHMOMC",
+        	permission: "off",
+            first_name: "jhmomc",
             last_name: "JHMOMC",
+            arrived_america: 2014,
+            arrived_mc: 2014,
+            b_mitzvah: "NA",
+            bagel: "NA",
+            bakery: "NA"
 
+        },
+        validate: function(attrs, options){
+        	if (attrs.permission !== "on"){
+        		return "you must check the box to continue";
+        	}
         }
     });
 
     var myFormView = new GeneologyFormView();
     // console.log(myFormView)
+
 
 
 

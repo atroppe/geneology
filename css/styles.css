@@ -27,7 +27,8 @@ body, html {
   font-size: 16px;
   width: 100%;
   height: auto;
-  min-width: 300px; }
+  min-width: 300px;
+  background-color: #92DCE0; }
 
 li {
   list-style: none;
@@ -90,9 +91,9 @@ header {
     header .buttons .signup a:hover, header .buttons .signup a:active, header .buttons .signup a:focus {
       background-color: #005e8b; }
   header .buttons .login a {
-    background-color: #3EC303; }
+    background-color: #7d00d6; }
     header .buttons .login a:hover, header .buttons .login a:active, header .buttons .login a:focus {
-      background-color: #267802; }
+      background-color: #50008a; }
 
 .sidebar {
   width: 315px;
@@ -120,7 +121,7 @@ header {
     .sidebar nav a:link, .sidebar nav a:visited {
       color: white; }
     .sidebar nav a:hover, .sidebar nav a:focus, .sidebar nav a:active {
-      color: #3EC303; }
+      color: #7d00d6; }
   .sidebar .active:before {
     content: '';
     width: 1em;
@@ -129,7 +130,7 @@ header {
     top: 50%;
     left: 0;
     transform: translate(-250%, -50%);
-    background-color: #3EC303; }
+    background-color: #7d00d6; }
   .sidebar .active:after {
     content: '';
     position: absolute;
@@ -139,7 +140,7 @@ header {
     width: 0;
     height: 0;
     border-top: 0.6em solid transparent;
-    border-left: 1em solid #3EC303;
+    border-left: 1em solid #7d00d6;
     border-bottom: 0.6em solid transparent; }
   .sidebar .federation {
     position: absolute;
@@ -161,10 +162,13 @@ header {
   min-height: 100%;
   background-color: #92DCE0;
   color: white;
-  min-height: 100%;
   padding-left: 360px;
   padding-top: 150px;
   font-size: 1em; }
+
+.success-msg {
+  font-size: 1em;
+  color: #023F75; }
 
 h1.form-title {
   width: 100%;
@@ -180,7 +184,7 @@ h1.form-title {
 .form-heading {
   text-align: center; }
   .form-heading h1 {
-    color: #0092D7;
+    color: #023F75;
     letter-spacing: 0.2em; }
 
 form .cell {
@@ -231,19 +235,22 @@ form .permission {
     width: 95%; }
     form .permission .checkText p {
       padding: 0;
-      margin: 0; }
+      margin: 0;
+      color: #023F75; }
 form .center {
   margin: 0 auto;
   text-align: center;
   width: 100%;
   padding: 1em; }
 form button {
-  font-size: 4em;
-  color: #3EC303;
-  background-color: transparent;
-  border: 0; }
+  font-size: 1em;
+  padding: 1em 2em;
+  color: white;
+  background-color: #7d00d6;
+  border: 0;
+  border-radius: 15px; }
   form button:hover {
-    color: #267802; }
+    background-color: #50008a; }
 
 .stage {
   text-align: left;
