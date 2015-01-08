@@ -27,11 +27,11 @@
 // }
 /**--------- GRIDS ------------**/
 $navy: #023F75;
-$grey: #B5B5B5;
-$turquoise: #92DCE0;
-$blue: #0092D7;
+$grey: #848452;
+$turquoise: #FEF6DF;
+$blue: #00CCCB;
 // $green: #3EC303;
-$green: #7d00d6;
+$green: #FABE42;
 $green-hover: darken($green, 15%);
 $orange: #EE8D09;
 $header-height: 132px;
@@ -290,29 +290,29 @@ form {
         margin-bottom: 1em;
     }
     select {
-        color: $blue;
+        color: $navy;
     }
     ::-webkit-input-placeholder {
         /* WebKit browsers */
         
-        color: $blue;
+        color: $navy;
     }
     :-moz-placeholder {
         /* Mozilla Firefox 4 to 18 */
         
-        color: $blue;
+        color: $navy;
         opacity: 1;
     }
     ::-moz-placeholder {
         /* Mozilla Firefox 19+ */
         
-        color: $blue;
+        color: $navy;
         opacity: 1;
     }
     :-ms-input-placeholder {
         /* Internet Explorer 10+ */
         
-        color: $blue;
+        color: $navy;
     }
     .permission {
         width: 100%;
