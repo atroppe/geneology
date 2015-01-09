@@ -48,12 +48,7 @@ $green: $pastel-orange;
 $green-hover: darken($green, 15%);
 $orange: #EE8D09;
 $header-height: 132px;
-// @mixin darkenHover($baseColor) {
-//     background-color: $baseColor;
-//     &:hover, &:active, &:focus {
-//         background-color: darken($baseColor, 5%);
-//     }
-// }
+
 body, html {
     font-family: 'Lato', Calibri, Arial, sans-serif;
     font-size: 16px;
