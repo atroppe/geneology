@@ -50,15 +50,21 @@ h3 {
 
 p {
   font-size: 1em;
-  color: #00CCCB;
+  color: #512B2A;
   line-height: 1.5; }
 
 a {
   text-decoration: none;
   display: inline-block; }
 
+a:link, a:visited {
+  color: #512B2A; }
+
+a:hover, a:focus, a:active {
+  color: #1f1010; }
+
 label {
-  color: #00CCCB;
+  color: #512B2A;
   line-height: 2;
   text-transform: uppercase; }
 
@@ -66,6 +72,7 @@ input, textarea, select, a, button {
   outline: none; }
 
 header {
+  z-index: 2;
   position: fixed;
   top: 0;
   left: 0;
@@ -73,7 +80,8 @@ header {
   background-color: #fff;
   padding: 0.5rem 1rem;
   color: #848452;
-  text-align: center; }
+  text-align: center;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4); }
   header .logo {
     width: 300px;
     height: 100px;
@@ -87,15 +95,16 @@ header {
     margin-left: 1em;
     border-radius: 15px; }
   header .buttons .signup a {
-    background-color: #00CCCB; }
+    background-color: #512B2A; }
     header .buttons .signup a:hover, header .buttons .signup a:active, header .buttons .signup a:focus {
-      background-color: #00807f; }
+      background-color: #1f1010; }
   header .buttons .login a {
     background-color: #FABE42; }
     header .buttons .login a:hover, header .buttons .login a:active, header .buttons .login a:focus {
       background-color: #e99f06; }
 
 .sidebar {
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
   width: 315px;
   overflow: auto;
   background-color: #848452;
@@ -103,7 +112,6 @@ header {
   left: 0;
   bottom: 0;
   top: 7.25em;
-  z-index: 2;
   padding: 1em; }
   .sidebar h3 {
     text-align: center;
@@ -168,7 +176,7 @@ header {
 
 .success-msg {
   font-size: 1em;
-  color: #023F75; }
+  color: black; }
 
 h1.form-title {
   width: 100%;
@@ -184,7 +192,12 @@ h1.form-title {
 .form-heading {
   text-align: center; }
   .form-heading h1 {
-    color: #023F75;
+    background-color: #512B2A;
+    border-radius: 15px;
+    color: white;
+    margin: 0;
+    padding: 0.5em 1em;
+    font-weight: 700;
     letter-spacing: 0.2em; }
 
 form .cell {
@@ -195,12 +208,8 @@ form .wide {
 form .subHeading {
   width: 100%; }
   form .subHeading h2 {
-    background-color: #00CCCB;
-    border-radius: 15px;
-    color: white;
-    margin: 0;
-    padding: 0.5em 1em;
-    font-weight: 700;
+    text-align: center;
+    color: black;
     letter-spacing: 0.2em; }
 form input, form textarea, form select {
   border: 3px solid #fff;
@@ -211,21 +220,21 @@ form input, form textarea, form select {
   background: #fff;
   margin-bottom: 1em; }
 form select {
-  color: #023F75; }
+  color: black; }
 form ::-webkit-input-placeholder {
   /* WebKit browsers */
-  color: #023F75; }
+  color: black; }
 form :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
-  color: #023F75;
+  color: black;
   opacity: 1; }
 form ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
-  color: #023F75;
+  color: black;
   opacity: 1; }
 form :-ms-input-placeholder {
   /* Internet Explorer 10+ */
-  color: #023F75; }
+  color: black; }
 form .permission {
   width: 100%;
   vertical-align: top; }
@@ -236,7 +245,7 @@ form .permission {
     form .permission .checkText p {
       padding: 0;
       margin: 0;
-      color: #023F75; }
+      color: black; }
 form .center {
   margin: 0 auto;
   text-align: center;
@@ -259,18 +268,18 @@ form button {
   width: 100%; }
 
 .step2 .relatives {
-  border: 3px solid #00CCCB;
+  border: 3px solid #512B2A;
   width: 100%;
   background-color: #FFF; }
   .step2 .relatives h3 {
-    background-color: #00CCCB;
+    background-color: #512B2A;
     color: white;
     margin: 0;
     padding: 0.5em 1em;
     font-weight: 700;
     letter-spacing: 0.2em; }
 .step2 .relative-list li {
-  color: #00CCCB; }
+  color: #512B2A; }
 
 .relatives, .form-heading, .subHeading, .permission {
   margin-bottom: 2rem; }

@@ -26,12 +26,25 @@
 //     vertical-align: top;
 // }
 /**--------- GRIDS ------------**/
+
+$pastel-orange: #FABE42;
+$robinegg-blue: #00CCCB;
+$robin-hover: darken($robinegg-blue, 15%);
+$corn-silk: #FEF6DF;
 $navy: #023F75;
-$grey: #848452;
-$turquoise: #FEF6DF;
-$blue: #00CCCB;
+$heath: #512B2A;
+// $heath-hover: #D07977;
+$heath-hover: darken($heath, 15%);
+$clay-creek: #848452;
+$lynch: #688091;
+$turtle-green: #37371D;
+//----------------------------------
+$navy: black;
+$grey: $clay-creek;
+$turquoise: $corn-silk;
+$blue: $heath;
 // $green: #3EC303;
-$green: #FABE42;
+$green: $pastel-orange;
 $green-hover: darken($green, 15%);
 $orange: #EE8D09;
 $header-height: 132px;
@@ -79,6 +92,12 @@ a {
     text-decoration: none;
     display: inline-block;
 }
+a:link, a:visited {
+    color: $heath;
+}
+a:hover, a:focus, a:active {
+    color: $heath-hover;
+}
 label {
     // margin: 0.5em;
     color: $blue;
@@ -89,6 +108,7 @@ input, textarea, select, a, button {
     outline: none;
 }
 header {
+    z-index: 2;
     position: fixed;
     top: 0;
     left: 0;
@@ -97,6 +117,7 @@ header {
     padding: 0.5rem 1rem;
     color: $grey;
     text-align: center;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
     .logo {
         width: 300px;
         height: 100px;
@@ -114,9 +135,9 @@ header {
         }
         .signup {
             a {
-                background-color: $blue;
+                background-color: $heath;
                 &:hover, &:active, &:focus {
-                    background-color: darken($blue, 15%);
+                    background-color: $heath-hover;
                 }
             }
         }
@@ -134,6 +155,7 @@ header {
 //     width: 15%;
 // }
 .sidebar {
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
     width: 315px;
     overflow: auto;
     background-color: $grey;
@@ -143,7 +165,7 @@ header {
     bottom: 0;
     top: 7.25em;
     // transform: translateY(-50%);
-    z-index: 2;
+    // z-index: 2;
     // margin: 2em;
     // margin-top: 155px;
     padding: 1em;
@@ -253,7 +275,14 @@ h1.form-title {
 .form-heading {
     text-align: center;
     h1 {
-        color: $navy;
+        // color: $navy;
+        // letter-spacing: 0.2em;
+        background-color: $heath;
+        border-radius: 15px;
+        color: white;
+        margin: 0;
+        padding: 0.5em 1em;
+        font-weight: 700;
         letter-spacing: 0.2em;
     }
 }
@@ -268,13 +297,8 @@ form {
     .subHeading {
         width: 100%;
         h2 {
-            // text-align: center;
-            background-color: $blue;
-            border-radius: 15px;
-            color: white;
-            margin: 0;
-            padding: 0.5em 1em;
-            font-weight: 700;
+            text-align: center;
+            color: $navy;
             letter-spacing: 0.2em;
         }
     }
