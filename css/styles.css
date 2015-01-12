@@ -392,7 +392,6 @@ form button {
 
 .step2 .relatives {
   border: 3px solid #512B2A;
-  width: 100%;
   background-color: #FFF; }
   .step2 .relatives h3 {
     background-color: #512B2A;
@@ -401,10 +400,12 @@ form button {
     padding: 0.5em 1em;
     font-weight: 700;
     letter-spacing: 0.2em; }
-.step2 .relative-list ul {
-  padding: 0; }
-.step2 .relative-list li {
-  color: #512B2A; }
+.step2 .relative-list {
+  padding: 2em; }
+  .step2 .relative-list ul {
+    padding: 0; }
+  .step2 .relative-list li {
+    color: #512B2A; }
 
 .relatives, .form-heading, .subHeading, .permission {
   margin-bottom: 2rem; }

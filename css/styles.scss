@@ -522,7 +522,7 @@ form {
 .step2 {
     .relatives {
         border: 3px solid $blue;
-        width: 100%;
+        // width: 100%;
         background-color: #FFF;
         h3 {
             background-color: $blue;
@@ -534,6 +534,7 @@ form {
         }
     }
     .relative-list {
+        padding: 2em;
         ul {
             padding: 0;
         }
