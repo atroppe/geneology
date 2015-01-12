@@ -213,6 +213,10 @@ header {
     bottom: 0;
     top: 0;
     padding: 7.25em 1em 1em 1em;
+    @media (max-width: 991px) {
+        width: 260px;
+        padding-top: 8em;
+    }
     @media (max-width: 869px) {
         display: none;
         // padding: 1em;
@@ -351,6 +355,9 @@ header {
     padding-left: 360px;
     padding-top: $header-height;
     font-size: 1em;
+    @media (max-width: 991px) {
+        padding-left: 260px;
+    }
     @media (max-width: 869px) {
         padding: $header-height 2em 2em 2em;
     }

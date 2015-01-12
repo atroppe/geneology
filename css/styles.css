@@ -158,6 +158,10 @@ header {
   bottom: 0;
   top: 0;
   padding: 7.25em 1em 1em 1em; }
+  @media (max-width: 991px) {
+    .sidebar {
+      width: 260px;
+      padding-top: 8em; } }
   @media (max-width: 869px) {
     .sidebar {
       display: none; } }
@@ -261,6 +265,9 @@ header {
   padding-left: 360px;
   padding-top: 119px;
   font-size: 1em; }
+  @media (max-width: 991px) {
+    .main {
+      padding-left: 260px; } }
   @media (max-width: 869px) {
     .main {
       padding: 119px 2em 2em 2em; } }
