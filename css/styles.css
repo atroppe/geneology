@@ -104,7 +104,8 @@ header {
   text-align: center;
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4); }
   header .logo {
-    width: 25%; }
+    width: 25%;
+    text-align: center; }
     header .logo img {
       max-width: 100%; }
     @media (max-width: 1065px) and (min-width: 992px) {
@@ -113,6 +114,9 @@ header {
     @media (max-width: 869px) {
       header .logo {
         width: 50%; } }
+    @media (max-width: 499px) {
+      header .logo {
+        width: 60%; } }
   header .pageTitle {
     width: 50%;
     text-align: center; }
@@ -133,12 +137,19 @@ header {
     @media (max-width: 869px) {
       header .buttons {
         width: 50%; } }
+    @media (max-width: 499px) {
+      header .buttons {
+        width: 40%; } }
     header .buttons a:link, header .buttons a:visited {
       font-size: 1em;
       color: white;
       padding: 1em 2em;
       margin-left: 1em;
       border-radius: 15px; }
+      @media (max-width: 499px) {
+        header .buttons a:link, header .buttons a:visited {
+          padding: 0.75em;
+          margin-left: 0.5em; } }
     header .buttons .signup a {
       background-color: #512B2A; }
       header .buttons .signup a:hover, header .buttons .signup a:active, header .buttons .signup a:focus {
@@ -270,7 +281,10 @@ header {
       padding-left: 260px; } }
   @media (max-width: 869px) {
     .main {
-      padding: 119px 2em 2em 2em; } }
+      padding: 119px 2em; } }
+  @media (max-width: 499px) {
+    .main {
+      padding: 7em 1em; } }
 
 .mobileTitle {
   text-align: center; }
@@ -387,6 +401,8 @@ form button {
     padding: 0.5em 1em;
     font-weight: 700;
     letter-spacing: 0.2em; }
+.step2 .relative-list ul {
+  padding: 0; }
 .step2 .relative-list li {
   color: #512B2A; }
 
