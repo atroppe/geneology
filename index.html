@@ -14,8 +14,12 @@
 
 <body>
     <header class="grid">
-        <div class="logo cell"></div>
-        <div class="cell">
+        <div class="logo cell">
+            <a href="http://jhmomc.org/site/">
+                <img src="./images/jhmomc_banner1.gif">
+            </a>
+        </div>
+        <div class="cell pageTitle">
             <h1>Family and Community Geneology Project</h1>
         </div>
         <div class="buttons cell">
@@ -60,15 +64,15 @@
                 </li>
             </ul>
         </nav>
-        <div class="federation">
 
-            <div class="jf-logo"></div>
-            <!--            <p>This project Funded in part by a grant from the Jewish Federation of Monmouth County.</p> -->
-        </div>
     </div>
     <div class="main">
         <p class="success-msg"></p>
         <div class="form-main">
+            <div class="mobileTitle mobile-only">
+                <h1>Family and Community Geneology Project</h1>
+                <h3>Data Collection Form</h3>
+            </div>
             <form action="/submit.php" method="POST">
                 <a name="signUp"></a>
                 <div class="stage step1">
@@ -884,14 +888,24 @@
                 </div>
                 <div class="center">
                     <button type="submit" class="btn btn-success">
-<!--                         <i class="fa fa-chevron-circle-down"></i> -->
+                        <!--                         <i class="fa fa-chevron-circle-down"></i> -->
                         save!
                     </button>
                 </div>
             </form>
         </div>
+        <div class="federation grid">
+
+            <div class="jf-logo cell">
+                <img src="./images/federation_logo.jpg">
+            </div>
+            <div class="jf-text cell">
+                <p>This project Funded in part by a grant from the Jewish Federation of Monmouth County.</p>
+            </div>
+        </div>
     </div>
-    <script src="js/modernizr.custom.js"></script>
+    <!--  
+    <script src="js/modernizr.custom.js"></script>-->
     <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="./bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
     <script type="text/javascript" src="./bower_components/parse-sdk/lib/parse.min.js"></script>

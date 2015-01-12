@@ -29,6 +29,18 @@ body, html {
   height: auto;
   min-width: 300px;
   background-color: #FEF6DF; }
+  @media (max-width: 1065px) and (min-width: 992px) {
+    body, html {
+      font-size: 15px; } }
+  @media (max-width: 991px) and (min-width: 768px) {
+    body, html {
+      font-size: 13px; } }
+  @media (max-width: 767px) and (min-width: 500px) {
+    body, html {
+      font-size: 11px; } }
+  @media (max-width: 499px) {
+    body, html {
+      font-size: 10px; } }
 
 li {
   list-style: none;
@@ -63,6 +75,16 @@ a:link, a:visited {
 a:hover, a:focus, a:active {
   color: #1f1010; }
 
+.mobile-only {
+  display: none; }
+  @media (max-width: 869px) {
+    .mobile-only {
+      display: block; } }
+
+@media (max-width: 869px) {
+  .desktop-only {
+    display: none; } }
+
 label {
   color: #512B2A;
   line-height: 2;
@@ -79,29 +101,52 @@ header {
   width: 100%;
   background-color: #fff;
   padding: 0.5rem 1rem;
-  color: #848452;
   text-align: center;
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4); }
   header .logo {
-    width: 300px;
-    height: 100px;
-    background-image: url("../images/jhmomc_banner1.gif");
-    background-size: 100% auto;
-    background-repeat: no-repeat; }
-  header .buttons a:link, header .buttons a:visited {
-    font-size: 1em;
-    color: white;
-    padding: 1em 2em;
-    margin-left: 1em;
-    border-radius: 15px; }
-  header .buttons .signup a {
-    background-color: #512B2A; }
-    header .buttons .signup a:hover, header .buttons .signup a:active, header .buttons .signup a:focus {
-      background-color: #1f1010; }
-  header .buttons .login a {
-    background-color: #FABE42; }
-    header .buttons .login a:hover, header .buttons .login a:active, header .buttons .login a:focus {
-      background-color: #e99f06; }
+    width: 25%; }
+    header .logo img {
+      max-width: 100%; }
+    @media (max-width: 1065px) and (min-width: 992px) {
+      header .logo {
+        width: 30%; } }
+    @media (max-width: 869px) {
+      header .logo {
+        width: 50%; } }
+  header .pageTitle {
+    width: 50%;
+    text-align: center; }
+    @media (max-width: 1065px) and (min-width: 870px) {
+      header .pageTitle {
+        width: 40%; } }
+    @media (max-width: 869px) {
+      header .pageTitle {
+        display: none; } }
+    header .pageTitle h1 {
+      color: #848452; }
+  header .buttons {
+    text-align: center;
+    width: 25%; }
+    @media (max-width: 1065px) and (min-width: 992px) {
+      header .buttons {
+        width: 30%; } }
+    @media (max-width: 869px) {
+      header .buttons {
+        width: 50%; } }
+    header .buttons a:link, header .buttons a:visited {
+      font-size: 1em;
+      color: white;
+      padding: 1em 2em;
+      margin-left: 1em;
+      border-radius: 15px; }
+    header .buttons .signup a {
+      background-color: #512B2A; }
+      header .buttons .signup a:hover, header .buttons .signup a:active, header .buttons .signup a:focus {
+        background-color: #1f1010; }
+    header .buttons .login a {
+      background-color: #FABE42; }
+      header .buttons .login a:hover, header .buttons .login a:active, header .buttons .login a:focus {
+        background-color: #e99f06; }
 
 .sidebar {
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
@@ -111,17 +156,56 @@ header {
   position: fixed;
   left: 0;
   bottom: 0;
-  top: 7.25em;
-  padding: 1em; }
+  top: 0;
+  padding: 7.25em 1em 1em 1em; }
+  @media (max-width: 869px) {
+    .sidebar {
+      display: none; } }
   .sidebar h3 {
     text-align: center;
     color: white; }
+    @media (max-width: 869px) {
+      .sidebar h3 {
+        display: none; } }
   .sidebar nav {
     width: 100%;
     padding: 1em 0em 1em 4em; }
+    @media (max-width: 869px) {
+      .sidebar nav {
+        padding: 1em; } }
     .sidebar nav > ul {
       padding: 0;
       margin: 0; }
+      @media (max-width: 869px) {
+        .sidebar nav > ul > li {
+          display: inline;
+          padding: 1em; } }
+    @media (max-width: 869px) {
+      .sidebar nav ul ul {
+        display: none;
+        position: absolute;
+        top: 100%; }
+      .sidebar nav ul ul li {
+        float: none;
+        position: relative; }
+      .sidebar nav ul li:hover > ul {
+        display: block; }
+      .sidebar nav ul {
+        position: relative;
+        display: inline-table; }
+      .sidebar nav ul:after {
+        content: '';
+        clear: both;
+        display: block; }
+      .sidebar nav ul li {
+        float: left; }
+      .sidebar nav ul li:hover {
+        background: black; }
+      .sidebar nav ul li:hover a {
+        color: red; }
+      .sidebar nav ul li a {
+        display: block;
+        color: pink; } }
     .sidebar nav a, .sidebar nav li {
       text-transform: uppercase;
       line-height: 2;
@@ -130,6 +214,9 @@ header {
       color: white; }
     .sidebar nav a:hover, .sidebar nav a:focus, .sidebar nav a:active {
       color: #FABE42; }
+  @media (max-width: 869px) {
+    .sidebar .active {
+      display: none; } }
   .sidebar .active:before {
     content: '';
     width: 1em;
@@ -150,29 +237,38 @@ header {
     border-top: 0.6em solid transparent;
     border-left: 1em solid #FABE42;
     border-bottom: 0.6em solid transparent; }
-  .sidebar .federation {
-    position: absolute;
-    bottom: 1em;
-    left: 50%;
-    transform: translateX(-50%); }
-    .sidebar .federation p {
-      font-size: 0.8em;
-      font-style: italic; }
-  .sidebar .jf-logo {
-    width: 200px;
-    height: 57px;
-    background-image: url("../images/federation_logo.jpg");
-    background-size: 90% auto;
-    background-repeat: no-repeat; }
+
+.federation {
+  width: 100%;
+  padding: 2rem; }
+  .federation p {
+    font-size: 0.8em;
+    font-style: italic; }
+
+.jf-text {
+  width: 75%;
+  text-align: center; }
+
+.jf-logo {
+  width: 25%; }
+  .jf-logo img {
+    max-width: 100%; }
 
 .main {
   min-height: 100vh;
   min-height: 100%;
   background-color: #FEF6DF;
-  color: white;
   padding-left: 360px;
-  padding-top: 150px;
+  padding-top: 119px;
   font-size: 1em; }
+  @media (max-width: 869px) {
+    .main {
+      padding: 119px 2em 2em 2em; } }
+
+.mobileTitle {
+  text-align: center; }
+  .mobileTitle h1, .mobileTitle h3 {
+    color: #848452; }
 
 .success-msg {
   font-size: 1em;
@@ -203,8 +299,14 @@ h1.form-title {
 form .cell {
   width: 30%;
   vertical-align: top; }
+  @media (max-width: 600px) {
+    form .cell {
+      width: 100%; } }
 form .wide {
   width: 48%; }
+  @media (max-width: 600px) {
+    form .wide {
+      width: 100%; } }
 form .subHeading {
   width: 100%; }
   form .subHeading h2 {
