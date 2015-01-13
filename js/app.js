@@ -66,26 +66,53 @@ function app() {
 
     var myFormView = new GeneologyFormView();
     // console.log(myFormView)
+    var headerHeight = $('header').height();
 
+    function smoothScroll(name) {
+        $('html, body').animate({
+            scrollTop: $('a[name=' + name + ']').offset().top - headerHeight
+        }, 'slow');
+    }
+
+    function clickScroll(name) {
+            $('body').on('click', 'a[href="#' + name + '"]', function() {
+                smoothScroll(name);
+            });
+        }
+        // console.log('a[href="#' + 'background' + '"]');
 
     $("body").on("click", "#signUp", function() {
         $(".step1l").addClass("hide");
         $('.step1s').removeClass('hide');
+        $('html, body').animate({
+            scrollTop: $('a[name=signUp]').offset().top - headerHeight
+        }, 'slow');
     });
     $("body").on("click", "#login", function() {
         $(".step1s").addClass("hide");
         $('.step1l').removeClass('hide');
+        $('html, body').animate({
+            scrollTop: $('a[name=login]').offset().top - headerHeight
+        }, 'slow');
     });
     $("body").on("click", ".section", function() {
         $('.active').removeClass('active');
         $(this).addClass("active");
     });
     $('body').on('click', 'a[href="#relatives"]', function() {
-        var headerHeight = $('header').height();
-        $('html, body').animate({
-            scrollTop: $('a[name=relatives]').offset().top - headerHeight
-        }, 'slow');
+        smoothScroll('relatives');
     });
+    clickScroll('background');
+    clickScroll('father');
+    clickScroll('f-gf');
+    clickScroll('f-gm');
+    clickScroll('mother');
+    clickScroll('m-gf');
+    clickScroll('m-gm');
+
+
+
+
 
     // //WAT section
 

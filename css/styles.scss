@@ -344,8 +344,11 @@ header {
     }
 }
 .federation {
+    margin: 0 auto;
+    text-align: center;
     width: 100%;
-    padding: 2rem;
+    max-width: 1000px;
+    padding: 2rem 4rem;
     p {
         font-size: 0.8em;
         font-style: italic;
@@ -353,7 +356,8 @@ header {
 }
 .jf-text {
     width: 75%;
-    text-align: center;
+    text-align: left;
+    padding-left: 5em;
 }
 .jf-logo {
     width: 25%;
@@ -362,6 +366,8 @@ header {
     }
 }
 .main {
+    text-align: center;
+    // max-width: 1000px;
     min-height: 100vh;
     min-height: 100%;
     background-color: $turquoise;

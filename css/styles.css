@@ -251,15 +251,19 @@ header {
     border-bottom: 0.6em solid transparent; }
 
 .federation {
+  margin: 0 auto;
+  text-align: center;
   width: 100%;
-  padding: 2rem; }
+  max-width: 1000px;
+  padding: 2rem 4rem; }
   .federation p {
     font-size: 0.8em;
     font-style: italic; }
 
 .jf-text {
   width: 75%;
-  text-align: center; }
+  text-align: left;
+  padding-left: 5em; }
 
 .jf-logo {
   width: 25%; }
@@ -267,6 +271,7 @@ header {
     max-width: 100%; }
 
 .main {
+  text-align: center;
   min-height: 100vh;
   min-height: 100%;
   background-color: #FEF6DF;
