@@ -101,9 +101,9 @@ a {
 a:link, a:visited {
     color: $heath;
 }
-a:hover, a:focus, a:active {
-    color: $heath-hover;
-}
+// a:hover, a:focus, a:active {
+//     color: $heath-hover;
+// }
 .mobile-only {
     display: none;
     @media (max-width: 869px) {
@@ -196,7 +196,7 @@ header {
                 margin-left: 0.5em;
             }
         }
-        .signup {
+        .signUp {
             a {
                 background-color: $heath;
                 &:hover, &:active, &:focus {
@@ -554,6 +554,9 @@ form {
     margin-bottom: 2rem;
 }
 .footer {} //
+.hide {
+    display: none;
+}
 //
 //
 //

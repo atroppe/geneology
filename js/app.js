@@ -67,6 +67,26 @@ function app() {
     var myFormView = new GeneologyFormView();
     // console.log(myFormView)
 
+
+    $("body").on("click", "#signUp", function() {
+        $(".step1l").addClass("hide");
+        $('.step1s').removeClass('hide');
+    });
+    $("body").on("click", "#login", function() {
+        $(".step1s").addClass("hide");
+        $('.step1l').removeClass('hide');
+    });
+    $("body").on("click", ".section", function() {
+        $('.active').removeClass('active');
+        $(this).addClass("active");
+    });
+    $('body').on('click', 'a[href="#relatives"]', function() {
+        var headerHeight = $('header').height();
+        $('html, body').animate({
+            scrollTop: $('a[name=relatives]').offset().top - headerHeight
+        }, 'slow');
+    });
+
     // //WAT section
 
     // var Data = Parse.Object.extend('data', {});

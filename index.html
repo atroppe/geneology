@@ -23,11 +23,11 @@
             <h1>Family and Community Geneology Project</h1>
         </div>
         <div class="buttons cell">
-            <div class="signup cell">
-                <a href="">Sign Up</a>
+            <div class="signUp cell">
+                <a href="#signUp" id="signUp">Sign Up</a>
             </div>
             <div class="login cell">
-                <a href="">Login</a>
+                <a href="#login" id="login">Login</a>
             </div>
         </div>
     </header>
@@ -35,29 +35,31 @@
         <h3>Data Collection Form</h3>
         <nav>
             <ul>
-                <li><a href="#signUp" class="active">Sign Up</a>
+<!--                 <li><a href="#signUp" class="active">Sign Up</a>
                 </li>
-                <li><a href="#relatives">Relatives</a>
+                <li><a href="#login">Login</a>
+                </li> -->
+                <li><a href="#relatives" class="section">Relatives</a>
                 </li>
-                <li><a href="#background">Your Background</a>
+                <li><a href="#background" class="section">Your Background</a>
                 </li>
                 <li>Your Father's Side
                     <ul>
-                        <li><a href="#father">Father</a>
+                        <li><a href="#father" class="section">Father</a>
                         </li>
-                        <li><a href="#f-gf">Grandfather</a>
+                        <li><a href="#f-gf" class="section">Grandfather</a>
                         </li>
-                        <li><a href="#f-gm">Grandmother</a>
+                        <li><a href="#f-gm" class="section">Grandmother</a>
                         </li>
                     </ul>
                 </li>
                 <li>Your Mother's Side
                     <ul>
-                        <li><a href="#mother">Mother</a>
+                        <li><a href="#mother" class="section">Mother</a>
                         </li>
-                        <li><a href="#m-gf">Grandfather</a>
+                        <li><a href="#m-gf" class="section">Grandfather</a>
                         </li>
-                        <li><a href="m-gm">Grandmother</a>
+                        <li><a href="#m-gm" class="section">Grandmother</a>
                         </li>
                     </ul>
                 </li>
@@ -74,8 +76,8 @@
                 <h3>Data Collection Form</h3>
             </div>
             <form action="/submit.php" method="POST">
-                <a name="signUp"></a>
-                <div class="stage step1">
+                <a name="signup"></a>
+                <div class="stage step1s">
                     <div class="form-heading">
                         <h1>Sign Up</h1>
                     </div>
@@ -104,15 +106,31 @@
                             <input type="text" id="email" name="email" placeholder="Email Address">
                         </div>
                         <div class="cell">
+                            <input type="text" id="password_create" name="password_create" placeholder="Create Password">
+                        </div>
+                    </div>
+                </div>
+                <a name="login"></a>
+                <div class="stage step1l hide">
+                    <div class="form-heading">
+                        <h1>Login</h1>
+                    </div>
+
+                    <div class="grid">
+                        <div class="cell">
+                            <input type="text" id="username" name="username" placeholder="Username">
+                        </div>
+                        <div class="cell">
                             <input type="text" id="password" name="password" placeholder="Password">
                         </div>
                     </div>
                 </div>
+                <a name="relatives"></a>
                 <div class="stage step2">
                     <div class="form-heading">
                         <h1>Relatives</h1>
                     </div>
-                    <div class="relatives">
+                    <!--                     <div class="relatives">
                         <h3>Are you related to...</h3>
                         <div class="relative-list">
                             <ul>
@@ -121,7 +139,7 @@
                                 <li>baby bear</li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="grid">
                         <div class="cell">
                             <input type="text" id="maiden_name" name="maiden_name" placeholder="Maiden Name">
@@ -146,6 +164,7 @@
                         </div>
                     </div>
                 </div>
+                <a name="background"></a>
                 <div class="stage step3">
                     <div class="form-heading">
                         <h1>Your Background</h1>

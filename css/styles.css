@@ -72,9 +72,6 @@ a {
 a:link, a:visited {
   color: #512B2A; }
 
-a:hover, a:focus, a:active {
-  color: #1f1010; }
-
 .mobile-only {
   display: none; }
   @media (max-width: 869px) {
@@ -150,9 +147,9 @@ header {
         header .buttons a:link, header .buttons a:visited {
           padding: 0.75em;
           margin-left: 0.5em; } }
-    header .buttons .signup a {
+    header .buttons .signUp a {
       background-color: #512B2A; }
-      header .buttons .signup a:hover, header .buttons .signup a:active, header .buttons .signup a:focus {
+      header .buttons .signUp a:hover, header .buttons .signUp a:active, header .buttons .signUp a:focus {
         background-color: #1f1010; }
     header .buttons .login a {
       background-color: #FABE42; }
@@ -409,5 +406,8 @@ form button {
 
 .relatives, .form-heading, .subHeading, .permission {
   margin-bottom: 2rem; }
+
+.hide {
+  display: none; }
 
 /*# sourceMappingURL=styles.css.map */
