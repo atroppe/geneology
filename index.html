@@ -35,7 +35,7 @@
         <h3>Data Collection Form</h3>
         <nav>
             <ul>
-<!--                 <li><a href="#signUp" class="active">Sign Up</a>
+                <!--                 <li><a href="#signUp" class="active">Sign Up</a>
                 </li>
                 <li><a href="#login">Login</a>
                 </li> -->
@@ -75,7 +75,7 @@
                 <h1>Family and Community Geneology Project</h1>
                 <h3>Data Collection Form</h3>
             </div>
-            <form action="/submit.php" method="POST">
+            <form id="newEntry" action="/submit.php" method="POST">
                 <a name="signUp"></a>
                 <div class="stage step1s">
                     <div class="form-heading">
@@ -92,6 +92,9 @@
                     <div class="grid">
                         <div class="cell">
                             <input type="text" id="first_name" name="first_name" placeholder="First Name">
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="middle_name" name="middle_name" placeholder="Middle Name">
                         </div>
                         <div class="cell">
                             <input type="text" id="last_name" name="last_name" placeholder="Last Name">
@@ -130,16 +133,7 @@
                     <div class="form-heading">
                         <h1>Relatives</h1>
                     </div>
-                    <!--                     <div class="relatives">
-                        <h3>Are you related to...</h3>
-                        <div class="relative-list">
-                            <ul>
-                                <li>mama bear</li>
-                                <li>papa bear</li>
-                                <li>baby bear</li>
-                            </ul>
-                        </div>
-                    </div> -->
+
                     <div class="grid">
                         <div class="cell">
                             <input type="text" id="maiden_name" name="maiden_name" placeholder="Maiden Name">
