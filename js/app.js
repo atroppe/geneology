@@ -3,6 +3,7 @@ window.onload = app;
 
 function app() {
 
+    //jhm parse account codes
     Parse.initialize("7ILyarTpCO2nWbjt1mxeB2iCOdiIdXvdXJkQmiua", "cLf5hm7uCoDQ2JvHY2gNkvPc8t6MSqaVYCVBp5u5");
 
 
@@ -12,7 +13,7 @@ function app() {
             "submit": "handleFormSubmit"
         },
         handleFormSubmit: function(event) {
-            event.preventDefault(); 
+            event.preventDefault();
             var arrayOfObjects = this.$el.find(":input").serializeArray();
             var object = {};
 

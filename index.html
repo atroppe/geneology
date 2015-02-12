@@ -254,14 +254,47 @@
                             <input type="text" id="origin" name="origin" placeholder="Previous Home Town and Country of Origin">
                         </div>
                         <div class="cell alignTop wide">
-                            <input type="text" id="bakery" name="bakery" placeholder="Favorite Kosher/Jewish Bakery">
-                        </div>
-                        <div class="cell alignTop wide">
                             <input type="text" id="bagel" name="bagel" placeholder="Best Bagel in Monmouth County">
                         </div>
                         <div class="cell alignTop wide">
-                            <input type="text" id="deli" name="deli" placeholder="Favorite Kosher/Jewish Deli">
-                            <select>
+                            <!--                            <input type="text" id="bakery" name="bakery" placeholder="Favorite Kosher/Jewish Bakery"> -->
+                            <select id="bakery" name="bakery">
+                                <option>Favorite Kosher/Jewish Bakery?</option>
+                                <option>Heimische Bakery - Lakewood NJ</option>
+                                <option>Yorktown Bagel & Bakery - Manalapan NJ</option>
+                                <option>Lakewood's Gingerbread House - Lakewood NJ</option>
+                                <option>Gelbstein Bakers - Lakewood NJ</option>
+                                <option>Solomon's Bakery - Manalapan NJ</option>
+                                <option>Lox, Stock & Deli Milltown NJ</option>
+                                <option>More Please Cupcakes - Englishtown NJ</option>
+                                <option>Hershey's Bakery - Howell</option>
+                                <option>other</option>
+                            </select>
+                        </div>
+                        <div class="cell alignTop wide">
+                            <input type="text" id="bakeryOther" name="bakeryOther" placeholder="Other Bakery">
+                        </div>
+
+                        <div class="cell alignTop wide">
+                            <!--                             <input type="text" id="deli" name="deli" placeholder="Favorite Kosher/Jewish Deli"> -->
+                            <select id="deli" name="deli">
+                                <!--  re-arange order of fields -->
+                                <option>Favorite Kosher/Jewish Deli?</option>
+                                <option>Fred & Murray - Manalapan NJ</option>
+                                <option>Lox, Stock & Deli Milltown NJ</option>
+                                <option>R & S Kosher Deli & Caterer - Lakewood NJ</option>
+                                <option>Deli King - Linden and Clark NJ</option>
+                                <option>Harold's - Edison NJ</option>
+                                <option>Park Place - Highland Park NJ</option>
+                                <option class="other">other</option>
+                            </select>
+                        </div>
+                        <!--   add js to hide other box -->
+                        <div class="cell alignTop wide">
+                            <input type="text" id="deliOther" name="deliOther" placeholder="Other Deli">
+                        </div>
+                        <div class="cell alignTop wide">
+                            <select id="sandwich" name="sandwich">
                                 <option>Favorite?</option>
                                 <option>Pastrami</option>
                                 <option>Corned Beef</option>
